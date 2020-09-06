@@ -22,10 +22,9 @@
 
     <!-- CSS Files -->
     <link href="{% static 'assets/css/bootstrap.min.css' %}" rel="stylesheet" />
-    <link href="{% static 'assets/css/material-bootstrap-wizard.css' %}" rel="stylesheet" />
 
     <!-- custom css -->
-    <link href="{% static 'assets/css/mystyle.css' %}" rel="stylesheet" />
+    <link href="{% static 'assets/css/custom.css' %}" rel="stylesheet" />
 </head>
 <body>
     
