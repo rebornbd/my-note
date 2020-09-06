@@ -16,11 +16,11 @@
 
     <link rel="icon" type="image/png" href="{% static 'assets/img/fav.ico' %}" />
 
-    <!--     Fonts and icons     -->
+    <!--  fonts & icons  -->
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
 
-    <!-- CSS Files -->
+    <!--  core css  -->
     <link href="{% static 'assets/css/bootstrap.min.css' %}" rel="stylesheet" />
 
     <!-- custom css -->
@@ -34,12 +34,12 @@
     {% endblock content %}
 
 
-    <!--   Core JS Files   -->
+    <!--  core js  -->
     <script src="{% static 'assets/js/jquery-2.2.4.min.js' %}" type="text/javascript"></script>
     <script src="{% static 'assets/js/bootstrap.min.js' %}" type="text/javascript"></script>
     <script src="{% static 'assets/js/jquery.bootstrap.js' %}" type="text/javascript"></script>
 
-    <!-- custom script -->
+    <!-- custom js -->
     <script src="{% static 'assets/js/myscript/custom.script.js' %}"></script>
 </body>
 </html>
