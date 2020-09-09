@@ -12,7 +12,7 @@ class Category(models.Model):
 
 class Book(models.Model):
   name = models.CharField(max_length=128)
-  category = models.ForeignKey('Category')
+  category = models.ForeignKey(Category, on_delete=models.CASCADE)
  
 # NB: many books make 1 category [ B (M) <------> (1) C ]
 ```
