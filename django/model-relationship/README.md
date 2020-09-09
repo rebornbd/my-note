@@ -13,7 +13,9 @@ class Category(models.Model):
 class Book(models.Model):
   name = models.CharField(max_length=128)
   category = models.ForeignKey('Category')
+ 
+# NB: many books make 1 category [ B (M) <------> (1) C ]
 ```
-### NB: many books make 1 category [ B (M) <------> (1) C ]
+
 
 
