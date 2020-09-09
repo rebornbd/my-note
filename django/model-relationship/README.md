@@ -40,4 +40,46 @@ class Book(models.Model):
 # link: https://docs.djangoproject.com/en/3.1/ref/models/fields/#django.db.models.ForeignKey.related_name
 ```
 
-#### related_name:
+#### works of related-name:
+```
+01) when you have a Book instance:
+----------------------------------
+    book = Book.objects.get(pk=1)
+    
+    book_name     = book.name
+    category_name = book.category.name
+
+02) when you have a Category instance:
+--------------------------------------
+    category = Category.objects.get(pk=1)
+    
+    category_name = category.name
+    books = category.categories.all()
+    
+    for book in books:
+      book_name = book.name
+      print(book_name)
+   
+    # default #
+    category = Category.objects.get(pk=1)
+    print(category.name)
+    for book in category.book_set.all():
+      print(book.name)
+
+NB: if you set related-name but default related-name still works.
+    related-name 01: book_set
+    related-name 02: categories
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
