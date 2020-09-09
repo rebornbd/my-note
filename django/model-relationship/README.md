@@ -42,15 +42,15 @@ class Book(models.Model):
 
 #### works of related-name:
 ```javascript
-01) when you have a Book instance:
-----------------------------------
+01) when you have a Book object:
+--------------------------------
     book = Book.objects.get(pk=1)
     
     book_name     = book.name
     category_name = book.category.name
 
-02) when you have a Category instance:
---------------------------------------
+02) when you have a Category object:
+------------------------------------
     category = Category.objects.get(pk=1)
     
     category_name = category.name
