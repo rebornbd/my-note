@@ -1,4 +1,4 @@
-# django model relationship
+# django model relationship types
 ```
 1) ManyToMany
 2) ManyToOne (ForeignKey)
