@@ -19,13 +19,26 @@ class Book(models.Model):
 
 ### models related_name:
 
-#### default related_name:
 ```python
+# default related_name
+
 class Book(models.Model):
   name = models.CharField(max_length=128)
   category = models.ForeignKey(Category, on_delete=models.CASCADE)
   
 # default name: book_set [django rules: ModelName + '_set']
+
+# -------------------------------------------------------------------
+# --------------------------------------------------------------------
+
+# if set related_name
+
+class Book(models.Model):
+  name = models.CharField(max_length=128)
+  category = models.ForeignKey(Category, related_name='categories' on_delete=models.CASCADE)
+  
+# name: categories [set related-name]
+
 # link: https://docs.djangoproject.com/en/3.1/ref/models/fields/#django.db.models.ForeignKey.related_name
 ```
 #### if set related_name:
