@@ -26,8 +26,8 @@ class Book(models.Model):
   name = models.CharField(max_length=128)
   category = models.ForeignKey(Category, on_delete=models.CASCADE)
   
-# default name: book_set
-# django rules: (ModelName + '_set') for related-name
+# django default related-name: book_set
+# django  rules  related-name: (ModelName + '_set') for related-name
 
 # if set related_name
 
