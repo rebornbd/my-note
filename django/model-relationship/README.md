@@ -41,7 +41,7 @@ class Book(models.Model):
 ```
 
 #### works of related-name:
-```
+```javascript
 01) when you have a Book instance:
 ----------------------------------
     book = Book.objects.get(pk=1)
@@ -70,7 +70,12 @@ NB: if you set related-name but default related-name still works.
     related-name 01: book_set
     related-name 02: categories
 ```
+### related-name always be plural, because it's return multiple quries
+```python
+books = category.categories.all()
 
+books = category.book_set.all()
+```
 
 
 
