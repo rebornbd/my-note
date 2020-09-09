@@ -1,7 +1,7 @@
 # django model relationship
 ```
 1) ManyToMany
-2) ManyToOne
+2) ManyToOne (ForeignKey)
 3) OneToOne
 ```
 
