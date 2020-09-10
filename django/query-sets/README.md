@@ -56,18 +56,30 @@ for person in persons:
 >>> Person.objects.all()
 <QuerySet [<Person: rahim>, <Person: karim>, <Person: ram>, <Person: sam>, ..., <Person: mou>]>
 
+
 # 02: filter()
 from django.db.models import Q
 
 qs_data00 = Person.objects.filter(username='mou')
+qs_data00 = Person.objects.filter(Q(age__gte=30))
+## AND
+qs_data01 = Person.objects.filter(username='mou', email='mou@em.com')
 qs_data01 = Person.objects.filter(Q(username='mou') & Q(email='mou@em.com'))
+## OR
 qs_data02 = Person.objects.filter(Q(username='mou') | Q(email='mou@em.com'))
 
 # command-line:
 >>> Person.objects.filter(username='mou')
 <QuerySet [<Person: mou>]>
+>>> Person.objects.filter(Q(username='mou') & Q(email='mou@em.com'))
+<QuerySet [<Person: mou>]>
+>>> Person.objects.filter(Q(username='mou') | Q(email='rahim@em.com'))
+<QuerySet [<Person: rahim>, <Person: mou>]>
+>>> Person.objects.filter(Q(age__gte=30))
+<QuerySet [<Person: karim>, <Person: sam>]>
 
-# 02: exclude()
+
+# 03: exclude()
 
 ```
 
