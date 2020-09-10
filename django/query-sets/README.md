@@ -238,6 +238,10 @@ qs_data = Person.objects.filter(pk=110).exists()
 True
 >>> Person.objects.filter(pk=110).exists()
 False
+
+# 07: first()
+qs_data = Person.objects.filter(Q(age__gte=25)).first()
+
 ```
 
 
