@@ -217,6 +217,18 @@ persons.delete()    # delete all    data
 # command-line:
 >>> Person.objects.get(pk=6).delete()
 (1, {'blog.Person': 1})
+
+# 05: count()
+qs_count = Person.objects.all().count()
+qs_count = Person.objects.filter(Q(username='mou') | Q(email='rahim@em.com')).count()
+
+# command-line:
+>>> Person.objects.all().count()
+6
+>>> Person.objects.filter(Q(username='mou') | Q(email='rahim@em.com')).count()
+2
+
+
 ```
 
 
