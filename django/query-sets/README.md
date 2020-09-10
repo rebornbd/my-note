@@ -118,6 +118,17 @@ data = Person.objects.all().order_by('username').reverse()
 # return first 100, if not then return present data #
 >>> Person.objects.all().order_by('username').reverse()[:100]
 <QuerySet [<Person: sam>, <Person: ram>, <Person: rahim>, <Person: mou>, <Person: karim>]>
+
+
+# 05: values()
+qs_data = Person.objects.values()
+qs_data = Person.objects.values('username')
+
+# command-line:
+>>> Person.objects.values('username')
+<QuerySet [{'username': 'rahim'}, {'username': 'karim'}, {'username': 'ram'}, {'username': 'sam'}, {'username': 'mou'}]>
+>>> Person.objects.values('age', 'fname')
+<QuerySet [{'age': 25, 'fname': 'Rahim'}, {'age': 30, 'fname': 'Karim'}, {'age': 20, 'fname': 'Ram'}, {'age': 35, 'fname': 'Sam'}, {'age': 21, 'fname': 'Mou'}]>
 ```
 
 
