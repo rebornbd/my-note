@@ -37,9 +37,9 @@ all
 filter
 exclude
 order_by
-distinct
 reverse
 values
+distinct
 
 # upper method examples:
 ------------------------
@@ -89,7 +89,7 @@ qs_data = Person.objects.exclude(username='mou', email='mou@em.com')
 <QuerySet [<Person: karim>, <Person: ram>, <Person: sam>]>
 
 
-# 03: order_by()
+# 04: order_by()
 qs_data = Person.objects.all().order_by('username')     # ascending  order
 qs_data = Person.objects.all().order_by('-username')    # descending order
 
@@ -102,6 +102,22 @@ qs_data = Person.objects.all().order_by('-username')    # descending order
 <QuerySet [<Person: mou>, <Person: rahim>]>
 >>> Person.objects.filter(Q(username='mou') | Q(email='rahim@em.com')).order_by('-username')
 <QuerySet [<Person: rahim>, <Person: mou>]>
+
+
+# 05: reverse()
+qs_data = Person.objects.all().order_by('username')
+data = qs_data.reverse()
+data = Person.objects.all().order_by('username').reverse()
+
+# command-line:
+>>> Person.objects.all().order_by('username').reverse()
+<QuerySet [<Person: sam>, <Person: ram>, <Person: rahim>, <Person: mou>, <Person: karim>]>
+# return first two #
+>>> Person.objects.all().order_by('username').reverse()[:2]
+<QuerySet [<Person: sam>, <Person: ram>]>
+# return first 100, if not then return present data #
+>>> Person.objects.all().order_by('username').reverse()[:100]
+<QuerySet [<Person: sam>, <Person: ram>, <Person: rahim>, <Person: mou>, <Person: karim>]>
 ```
 
 
