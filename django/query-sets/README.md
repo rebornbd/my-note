@@ -54,6 +54,20 @@ for person in persons:
 >>> from account.models import Person
 >>> Person.objects.all()
 <QuerySet [<Person: rahim>, <Person: karim>, <Person: ram>, <Person: sam>, ..., <Person: mou>]>
+
+# 02: filter()
+from django.db.models import Q
+
+qs_data00 = Person.objects.filter(username='mou')
+qs_data01 = Person.objects.filter(Q(username='mou') & Q(email='mou@em.com'))
+qs_data02 = Person.objects.filter(Q(username='mou') | Q(email='mou@em.com'))
+
+# command-line:
+>>> Person.objects.filter(username='mou')
+<QuerySet [<Person: mou>]>
+
+# 02: exclude()
+
 ```
 
 
