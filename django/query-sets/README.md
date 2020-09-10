@@ -26,7 +26,7 @@ id      username        fname       lname       email           city        age 
 100     mou             Mou         Mim         mou@em.com      dhaka       21      2020-08-01      null
 ```
 
-### [method]() that return new querysets
+### [method](#method-that-return-new-querysets) that return new querysets
 ```python
 Entry.objects.filter(**kwargs).exclude(**kwargs).order_by(**kwargs)
 
