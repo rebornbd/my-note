@@ -229,6 +229,15 @@ qs_count = Person.objects.filter(Q(username='mou') | Q(email='rahim@em.com')).co
 2
 
 
+# 06: exists()
+qs_data = Person.objects.filter(pk=1).exists()
+qs_data = Person.objects.filter(pk=10).exists()
+
+# command-line:
+>>> Person.objects.filter(pk=1).exists()
+True
+>>> Person.objects.filter(pk=10).exists()
+False
 ```
 
 
