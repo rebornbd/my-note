@@ -312,7 +312,35 @@ False
 Entry.objects.get(id__exact=12)
 ```
 ```python
-
+in
+gt
+gte
+lt
+lte
+range
+exact
+iexact
+contains
+icontains
+startswith
+istartswith
+endswith
+iendswith
+regex
+iregex
+date
+year
+iso_year
+month
+day
+week
+week_day
+quarter
+time
+hour
+minute
+second
+isnull
 ```
 
 
