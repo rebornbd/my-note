@@ -160,7 +160,9 @@ qs_data = Person.objects.filter(Q(username='mou') | Q(email='rahim@em.com'))
 <QuerySet [<Person: rahim>, <Person: mou>]>
 ```
 
-### methods that do not return querysets
+### [methods](#methods-that-do-not-return-querysets) that do not return [querysets](#methods-that-do-not-return-querysets)
+```python
+```
 
 
 
