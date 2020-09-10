@@ -162,6 +162,22 @@ qs_data = Person.objects.filter(Q(username='mou') | Q(email='rahim@em.com'))
 
 ### [methods](#methods-that-do-not-return-querysets) that do not return [querysets](#methods-that-do-not-return-querysets)
 ```python
+get
+create
+update
+delete
+count
+exists
+first
+last
+latest
+iterator
+aggregate
+get_or_create
+update_or_create
+
+
+
 ```
 
 
