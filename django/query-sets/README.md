@@ -51,6 +51,7 @@ for person in persons:
     person.lname
 
 # command-line:
+>>> python manage.py shell
 >>> from account.models import Person
 >>> Person.objects.all()
 <QuerySet [<Person: rahim>, <Person: karim>, <Person: ram>, <Person: sam>, ..., <Person: mou>]>
