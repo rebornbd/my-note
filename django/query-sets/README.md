@@ -149,7 +149,7 @@ qs_data = Person.objects.filter(Q(username='mou') & Q(email='mou@em.com'))
 <QuerySet [<Person: mou>]>
 
 
-## OR [|]
+# 02: OR [|]
 qs_data = Person.objects.filter(Q(username='mou') | Q(email='mou@em.com'))
 qs_data = Person.objects.filter(Q(username='mou') | Q(email='rahim@em.com'))
 
