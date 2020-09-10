@@ -12,6 +12,9 @@ class Person(models.Model):
     
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+    
+    def __str__(self):
+        return self.username
 ```
 ### person model - demo data example:
 ```
@@ -38,5 +41,27 @@ distinct
 reverse
 values
 
+# upper method examples:
+------------------------
+# 01: all()
+persons = Person.objects.all()
+for person in persons:
+    person.username
+    person.fname
+    person.lname
 
+# command-line:
+>>> from account.models import Person
+>>> Person.objects.all()
+<QuerySet [<Person: rahim>, <Person: karim>, <Person: ram>, <Person: sam>, ..., <Person: mou>]>
 ```
+
+
+
+
+
+
+
+
+
+
