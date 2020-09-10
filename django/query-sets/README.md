@@ -307,7 +307,13 @@ person, created = Person.objects.update_or_create(username='ripon', defaults={'u
 False
 ```
 
-### field lookups
+### [field lookups](#field-lookups)
+```python
+Entry.objects.get(id__exact=12)
+```
+```python
+
+```
 
 
 
