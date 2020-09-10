@@ -177,7 +177,46 @@ get_or_create
 update_or_create
 
 
+# 01: get()
+qs_data = Person.objects.get(id=1)
+qs_data = Person.objects.get(pk=1)
 
+# command-line:
+>>> Person.objects.get(id=1)
+<Person: rahim>
+>>> Person.objects.get(pk=1)
+<Person: rahim>
+
+
+# 02: create()
+person = Person.objects.create(username='rahim', fname='Rahim', lname='Uddin', email='rahim@em.com', city='dhaka', age=25)
+# OR
+person = Person.objects.create(username='rahim', fname='Rahim', lname='Uddin', email='rahim@em.com', city='dhaka', age=25)
+person.save(force_insert=True)
+
+# command-line:
+>>> Person.objects.create(username='gazi', fname='Gazi', lname='Sekh', email='gazi@em.com', city='dhaka', age=26)
+<Person: gazi>
+
+
+# 03: update()
+qs_data = Person.objects.filter(pk=6).update(username='Moumita')
+
+# command-line:
+>>> Person.objects.filter(pk=6).update(username='Moumita')
+1
+
+
+# 04: delete()
+person  = Person.objects.get(pk=6)
+persons = Person.objects.all()
+
+person.delete()     # delete single data
+persons.delete()    # delete all    data
+
+# command-line:
+>>> Person.objects.get(pk=6).delete()
+(1, {'blog.Person': 1})
 ```
 
 
