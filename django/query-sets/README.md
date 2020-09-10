@@ -32,7 +32,8 @@ id      username        fname       lname       email           city        age 
 ### [methods](#methods-that-return-new-querysets) that return new [querysets](#methods-that-return-new-querysets)
 ```python
 Entry.objects.filter(**kwargs).exclude(**kwargs).order_by(**kwargs)
-
+```
+```python
 all
 filter
 exclude
