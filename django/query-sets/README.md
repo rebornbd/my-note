@@ -131,7 +131,8 @@ qs_data = Person.objects.values('username')
 <QuerySet [{'age': 25, 'fname': 'Rahim'}, {'age': 30, 'fname': 'Karim'}, {'age': 20, 'fname': 'Ram'}, {'age': 35, 'fname': 'Sam'}, {'age': 21, 'fname': 'Mou'}]>
 ```
 
-### operators that return new querysets
+### [operators](#operators-that-return-new-querysets) that return new [querysets](#operators-that-return-new-querysets)
+
 
 
 
