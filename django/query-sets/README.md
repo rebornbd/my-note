@@ -87,6 +87,21 @@ qs_data = Person.objects.exclude(username='mou', email='mou@em.com')
 <QuerySet [<Person: rahim>, <Person: karim>, <Person: ram>, <Person: sam>]>
 >>> Person.objects.exclude(Q(username='mou') | Q(email='rahim@em.com'))
 <QuerySet [<Person: karim>, <Person: ram>, <Person: sam>]>
+
+
+# 03: order_by()
+qs_data = Person.objects.all().order_by('username')     # ascending  order
+qs_data = Person.objects.all().order_by('-username')    # descending order
+
+# command-line:
+>>> Person.objects.all().order_by('username')
+<QuerySet [<Person: karim>, <Person: mou>, <Person: rahim>, <Person: ram>, <Person: sam>]>
+>>> Person.objects.all().order_by('-username')
+<QuerySet [<Person: sam>, <Person: ram>, <Person: rahim>, <Person: mou>, <Person: karim>]>
+>>> Person.objects.filter(Q(username='mou') | Q(email='rahim@em.com')).order_by('username')
+<QuerySet [<Person: mou>, <Person: rahim>]>
+>>> Person.objects.filter(Q(username='mou') | Q(email='rahim@em.com')).order_by('-username')
+<QuerySet [<Person: rahim>, <Person: mou>]>
 ```
 
 
