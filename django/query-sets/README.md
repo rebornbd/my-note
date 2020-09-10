@@ -80,7 +80,13 @@ qs_data02 = Person.objects.filter(Q(username='mou') | Q(email='mou@em.com'))
 
 
 # 03: exclude()
+qs_data = Person.objects.exclude(username='mou', email='mou@em.com')
 
+# command-line:
+>>> Person.objects.exclude(username='mou', email='mou@em.com')
+<QuerySet [<Person: rahim>, <Person: karim>, <Person: ram>, <Person: sam>]>
+>>> Person.objects.exclude(Q(username='mou') | Q(email='rahim@em.com'))
+<QuerySet [<Person: karim>, <Person: ram>, <Person: sam>]>
 ```
 
 
