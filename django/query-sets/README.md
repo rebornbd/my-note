@@ -180,7 +180,6 @@ update_or_create
 # 01: get()
 qs_data = Person.objects.get(id=1)
 qs_data = Person.objects.get(pk=1)
-
 # command-line:
 >>> Person.objects.get(id=1)
 <Person: rahim>
@@ -193,7 +192,6 @@ person = Person.objects.create(username='rahim', fname='Rahim', lname='Uddin', e
 # OR
 person = Person.objects.create(username='rahim', fname='Rahim', lname='Uddin', email='rahim@em.com', city='dhaka', age=25)
 person.save(force_insert=True)
-
 # command-line:
 >>> Person.objects.create(username='gazi', fname='Gazi', lname='Sekh', email='gazi@em.com', city='dhaka', age=26)
 <Person: gazi>
@@ -201,7 +199,6 @@ person.save(force_insert=True)
 
 # 03: update()
 qs_data = Person.objects.filter(pk=6).update(username='Moumita')
-
 # command-line:
 >>> Person.objects.filter(pk=6).update(username='Moumita')
 1
@@ -210,10 +207,8 @@ qs_data = Person.objects.filter(pk=6).update(username='Moumita')
 # 04: delete()
 person  = Person.objects.get(pk=6)
 persons = Person.objects.all()
-
 person.delete()     # delete single data
 persons.delete()    # delete all    data
-
 # command-line:
 >>> Person.objects.get(pk=6).delete()
 (1, {'blog.Person': 1})
@@ -221,7 +216,6 @@ persons.delete()    # delete all    data
 # 05: count()
 qs_count = Person.objects.all().count()
 qs_count = Person.objects.filter(Q(username='mou') | Q(email='rahim@em.com')).count()
-
 # command-line:
 >>> Person.objects.all().count()
 6
@@ -232,7 +226,6 @@ qs_count = Person.objects.filter(Q(username='mou') | Q(email='rahim@em.com')).co
 # 06: exists()
 qs_data = Person.objects.filter(pk=1).exists()
 qs_data = Person.objects.filter(pk=110).exists()
-
 # command-line:
 >>> Person.objects.filter(pk=1).exists()
 True
@@ -241,7 +234,77 @@ False
 
 # 07: first()
 qs_data = Person.objects.filter(Q(age__gte=25)).first()
+# command-line:
+>>> Person.objects.filter(Q(age__gte=25)).first()
+<Person: rahim>
 
+
+# 08: last()
+qs_data = Person.objects.filter(Q(age__gte=25)).last()
+# command-line:
+>>> Person.objects.filter(Q(age__gte=25)).last()
+<Person: gazi>
+
+
+# 09: latest()
+qs_data = Person.objects.latest('created_at')
+qs_data = Person.objects.all().latest('created_at')
+qs_data = Person.objects.filter(age__gte=30).latest('created_at')
+# command-line:
+>>> Person.objects.latest('created_at')
+<Person: gazi>
+>>> Person.objects.all().latest('created_at')
+<Person: gazi>
+>>> Person.objects.filter(age__gte=30).latest('created_at')
+<Person: sam>
+
+
+# 10: iterator()
+persons = Person.objects.all()
+for person in persons.iterator():
+    person.username
+    person.email
+# command-line:
+>>> persons = Person.objects.all()
+>>> for person in persons.iterator():
+...     person.username
+...     person.email
+rahim rahim@em.com, karim karim@em.com, ram ram@em.com, sam sam@em.com, mou mou@em.com, gazi gazi@em.com
+# output formate is changed
+# the queryset cache is a problem if your queryset is huge
+# Link: https://blog.etianen.com/blog/2013/06/08/django-querysets/
+
+
+# 11: aggregate()
+...
+# in databases they are represented by operators as: sum & avg, in django they are represented as: aggregate & annotate
+# Link: https://www.agiliq.com/blog/2009/08/django-aggregation-tutorial/
+
+
+# 12: get_or_create()
+person, created = Person.objects.get_or_create(username='gazi')
+# command-line:
+>>> Person.objects.get_or_create(username='gazi')
+(<Person: gazi>, False)
+>>> person, created = Person.objects.get_or_create(username='gazi')
+>>> person
+<Person: gazi>
+>>> created
+False
+
+
+# 13: update_or_create()
+person, created = Person.objects.update_or_create(username='ripon', defaults={'username': 'ripon', 'email': 'ripon@em.com'})
+# command-line:
+>>> Person.objects.update_or_create(username='ripon', defaults={'username': 'ripon', 'email': 'ripon@em.com'})
+(<Person: ripon>, False)
+>>> Person.objects.update_or_create(username='rupon', defaults={'username': 'rupon', 'email': 'rupon@em.com'})
+(<Person: rupon>, True)
+>>> person, created = Person.objects.update_or_create(username='ripon', defaults={'username': 'ripon', 'email': 'ripon@em.com'})
+>>> person
+<Person: ripon>
+>>> created
+False
 ```
 
 
