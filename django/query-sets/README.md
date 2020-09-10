@@ -132,7 +132,33 @@ qs_data = Person.objects.values('username')
 ```
 
 ### [operators](#operators-that-return-new-querysets) that return new [querysets](#operators-that-return-new-querysets)
+```python
+01) AND (&)
+02) OR  (|)
 
+from django.db.models import Q
+
+# 01: AND [&]
+qs_data = Person.objects.filter(username='mou', email='mou@em.com')
+qs_data = Person.objects.filter(Q(username='mou') & Q(email='mou@em.com'))
+
+# command-line:
+>>> Person.objects.filter(username='mou', email='mou@em.com')
+<QuerySet [<Person: mou>]>
+>>> Person.objects.filter(Q(username='mou') & Q(email='mou@em.com'))
+<QuerySet [<Person: mou>]>
+
+
+## OR [|]
+qs_data = Person.objects.filter(Q(username='mou') | Q(email='mou@em.com'))
+qs_data = Person.objects.filter(Q(username='mou') | Q(email='rahim@em.com'))
+
+# command-line:
+>>> Person.objects.filter(Q(username='mou') | Q(email='mou@em.com'))
+<QuerySet [<Person: mou>]>
+>>> Person.objects.filter(Q(username='mou') | Q(email='rahim@em.com'))
+<QuerySet [<Person: rahim>, <Person: mou>]>
+```
 
 
 
