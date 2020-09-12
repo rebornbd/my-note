@@ -457,7 +457,7 @@ SELECT ... WHERE EXTRACT('month' FROM updated_at) >= '6';
 ...
 ```
 
-### aggregation functions
+### [aggregation functions](#aggregation-functions)
 ```
 expressions
 output_field
@@ -471,6 +471,11 @@ StdDev
 Sum
 Variance
 ```
+```python
+# 01: expressions()
+
+```
+
 
 
 
