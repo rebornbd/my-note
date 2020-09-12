@@ -471,10 +471,6 @@ StdDev
 Sum
 Variance
 ```
-```python
-# 01: expressions()
-
-```
 
 
 
