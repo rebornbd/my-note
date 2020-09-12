@@ -310,25 +310,20 @@ False
 
 ### [field lookups](#field-lookups)
 ```python
-Entry.objects.get(id__exact=12)
+Entry.objects.filter(DbFieldName__FieldLooksup = value)
+
+Entry.objects.filter(age__in = [20, 30, 25, 21])
 ```
 ```python
 in
-gt
-gte
-lt
-lte
+gt, gte
+lt, lte
+exact, iexact
+contains, icontains
+startswith, istartswith
+endswith, iendswith
+regex, iregex
 range
-exact
-iexact
-contains
-icontains
-startswith
-istartswith
-endswith
-iendswith
-regex
-iregex
 date
 year
 iso_year
@@ -342,6 +337,124 @@ hour
 minute
 second
 isnull
+
+
+# 01: in [include]
+persons = Person.objects.filter(age__in=[20, 30, 25])
+persons = Person.objects.filter(id__in=[1, 3, 5, 9])
+# command-line:
+>>> Person.objects.filter(age__in=[20, 30, 25])
+<QuerySet [<Person: rahim>, <Person: karim>, <Person: ram>]>
+>>> Person.objects.filter(age__in=[34, 15, 27])
+<QuerySet []>
+
+
+# 02: gt, gte [greater than or equal to]
+persons = Person.objects.filter(age__gt=20)
+persons = Person.objects.filter(age__gte=20)
+# command-line:
+>>> Person.objects.filter(age__gt=20)
+<QuerySet [<Person: rahim>, <Person: karim>, <Person: sam>, <Person: mou>, <Person: gazi>]>
+>>> Person.objects.filter(age__gte=20)
+<QuerySet [<Person: rahim>, <Person: karim>, <Person: ram>, <Person: sam>, <Person: mou>, <Person: gazi>]>
+
+
+# 03: lt, lte [less than or equal to]
+persons = Person.objects.filter(age__lt=20)
+persons = Person.objects.filter(age__lte=20)
+# command-line:
+>>> Person.objects.filter(age__lt=20)
+<QuerySet [<Person: rupon>, <Person: ripon>]>
+>>> Person.objects.filter(age__lte=20)
+<QuerySet [<Person: ram>, <Person: rupon>, <Person: ripon>]>
+
+
+# 04: exact, iexact [exact or case-insensitive exact match]
+person = Person.objects.get(id__exact = 1)
+person = Person.objects.filter(username__iexact = 'Rahim')
+# command-line:
+>>> Person.objects.filter(username__iexact = 'Rahim')[0].username
+'rahim'
+
+
+# 05: contains, icontains [case-sensitive or case-insensitive contains]
+persons =  Person.objects.filter(username__contains = 'AM')
+persons =  Person.objects.filter(username__icontains = 'AM')
+# command-line:
+>>> Person.objects.filter(fname__icontains='rah')
+<QuerySet [<Person: rahim>]>
+# NB: SQLite doesn’t support case-sensitive
+
+
+# 06: startswith, istartswith [case-sensitive or case-insensitive starts-with]
+persons = Person.objects.filter(fname__startswith='rah')
+# command-line:
+>>> Person.objects.filter(fname__startswith='rah')
+<QuerySet [<Person: rahim>]>
+>>> Person.objects.filter(fname__startswith='raH')
+<QuerySet [<Person: rahim>]>
+# NB: SQLite doesn’t support case-sensitive
+
+
+# 07: endswith, iendswith [case-sensitive or case-insensitive ends-with]
+persons = Person.objects.filter(fname__endswith='im')
+# command-line:
+>>> Person.objects.filter(fname__endswith='im')
+<QuerySet [<Person: rahim>, <Person: karim>]>
+# NB: SQLite doesn’t support case-sensitive
+
+
+# 08: regex, iregex [case-sensitive or case-insensitive regular expression match]
+persons = Person.objects.filter(username__regex='^[A-Za-z0-9]')
+# command-line:
+>>> Person.objects.filter(username__regex='^[a-g0-9]')
+<QuerySet [<Person: gazi>]>
+# NB: SQLite doesn’t support case-sensitive
+
+
+# 09: range [range (inclusive)]
+Person.objects.filter(age__range = (startValue, endValue))
+# command-line:
+>>> Person.objects.filter(age__range = (10, 20))
+<QuerySet [<Person: ram>]>
+
+
+# 10: isnull [IS NULL]
+Person.objects.filter(updated_at__isnull=True)
+# command-line:
+>>> Person.objects.filter(updated_at__isnull=True)
+<QuerySet []>
+
+
+import datetime
+
+# 11: date [IS NULL]
+persons = Person.objects.filter(updated_at__date = datetime.date(2020, 9, 15))
+persons = Person.objects.filter(updated_at__date__gt = datetime.date(2020, 9, 15))
+
+
+# 12: year
+Person.objects.filter(updated_at__year = 2019)
+Person.objects.filter(updated_at__year__gte = 2019)
+# SQL equivalent:
+SELECT ... WHERE updated_at BETWEEN '2019-01-01' AND '2019-12-31';
+SELECT ... WHERE updated_at >= '2019-01-01';
+
+
+# 13: iso_year [an exact ISO 8601 week-numbering year match]
+Person.objects.filter(updated_at__iso_year = 2019)
+Person.objects.filter(updated_at__iso_year__gte = 2019)
+
+
+# 14: month
+Person.objects.filter(updated_at__month = 12)
+Person.objects.filter(updated_at__month__gte = 6)
+# SQL equivalent:
+SELECT ... WHERE EXTRACT('month' FROM updated_at) = '12';
+SELECT ... WHERE EXTRACT('month' FROM updated_at) >= '6';
+
+...
+...
 ```
 
 
