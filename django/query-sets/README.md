@@ -457,6 +457,20 @@ SELECT ... WHERE EXTRACT('month' FROM updated_at) >= '6';
 ...
 ```
 
+### aggregation functions
+```
+expressions
+output_field
+filter
+**extra
+Avg
+Count
+Max
+Min
+StdDev
+Sum
+Variance
+```
 
 
 
