@@ -19,7 +19,7 @@ class Post(models.Model):
     def __str__(self):
         return self.title
 ```
-```
+```python
 # command-line:
 (ENV) $: python manage.py shell
 
