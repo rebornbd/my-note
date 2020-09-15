@@ -10,7 +10,7 @@ from django.contrib.auth.models import User
 class Post(models.Model):
     title       = models.CharField(max_length=100)
     content     = models.TextField()
-    author      = models.ForeignKey(User, related_name='users', on_delete=models.CASCADE)
+    author      = models.ForeignKey(User, related_name='posts', on_delete=models.CASCADE)
 
     class Meta:
         # Gives the proper plural name for admin
@@ -35,7 +35,7 @@ class Post(models.Model):
 
 # first user all post
 >>> User.objects.all()[0].post_set.all()  # default name
->>> User.objects.all()[0].users.all()     # using related name
+>>> User.objects.all()[0].posts.all()     # using related name
 
 
 # ---------------------------------------------------
