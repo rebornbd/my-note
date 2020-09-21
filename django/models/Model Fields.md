@@ -1,4 +1,4 @@
-# Field types
+# field types
 ```python
 AutoField
 BigAutoField
@@ -29,7 +29,7 @@ URLField
 UUIDField
 ```
 
-# Relationship fields
+# relationship fields
 ```python
 OneToOneField
 ForeignKey
