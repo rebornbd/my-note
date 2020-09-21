@@ -1,3 +1,10 @@
+# relationship fields
+```python
+OneToOneField
+ForeignKey
+ManyToManyField
+```
+
 # field types
 ```python
 AutoField
@@ -29,9 +36,23 @@ URLField
 UUIDField
 ```
 
-# relationship fields
+# field options
 ```python
-OneToOneField
-ForeignKey
-ManyToManyField
+null
+blank
+choices
+db_column
+db_index
+db_tablespace
+default
+editable
+error_messages
+help_text
+primary_key
+unique
+unique_for_date
+unique_for_month
+unique_for_year
+verbose_name
+validators
 ```
