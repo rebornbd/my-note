@@ -39,7 +39,7 @@ UUIDField
 # field options
 ```python
 null
-blank
+Blank
 choices
 db_column
 db_index
