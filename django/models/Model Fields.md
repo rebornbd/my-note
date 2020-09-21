@@ -19,7 +19,6 @@ DecimalField
 DurationField
 EmailField
 FileField
-FileField and FieldFile
 FilePathField
 FloatField
 ImageField
