@@ -4,16 +4,40 @@ OneToOneField
 ForeignKey
 ManyToManyField
 ```
-
 <table>
     <thead>
         <tr>
-            <th>Layer 1</th>
-            <th>Layer 2</th>
-            <th>Layer 3</th>
+            <th>FIELD TYPES</th>
+            <th>FIELD OPTIONS</th>
+            <th>TEMPLATES</th>
         </tr>
     </thead>
     <tbody>
+        <tr>
+            <td>SmallIntegerField</td>
+            <td rowspan=7>blank,null, default</td>
+            <td rowspan=7>number</td>
+        </tr>
+        <tr>
+            <td>IntegerField</td>
+        </tr>
+        <tr>
+            <td>BigIntegerField</td>
+        </tr>
+        <tr>
+            <td>PositiveSmallIntegerField</td>
+        </tr>
+        <tr>
+            <td>PositiveIntegerField</td>
+        </tr>
+        <tr>
+            <td>FloatField</td>
+        </tr>
+        <tr>
+            <td>DecimalField</td>
+        </tr>
+      
+      
         <tr>
             <td rowspan=4>L1 Name</td>
             <td rowspan=2>L2 Name A</td>
