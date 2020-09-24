@@ -15,7 +15,10 @@ ManyToManyField
     <tbody>
 		<tr>
             <td>SmallIntegerField</td>
-            <td rowspan=4>null</td>
+            <td rowspan=4>
+		null <br />
+		blank
+	    </td>
         </tr>
 		<tr>
             <td>IntegerField</td>
@@ -25,7 +28,6 @@ ManyToManyField
         </tr>
 		<tr>
             <td>PositiveSmallIntegerField</td>
-            <td></td>
         </tr>
 		<tr>
             <td>PositiveIntegerField</td>
