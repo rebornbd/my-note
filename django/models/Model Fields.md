@@ -6,10 +6,10 @@ ManyToManyField
 ```
 
 | Header 1  | Header 2            | Header 3  |
-| --------- | ------------------- | --------- |
+| :---      |        :---:        |      ---: |
+| Some data | Cell 2              |           |
 | Some data | Cell 2              | Cell 3    |
-|       |  |  |
-| data      | Some long data here | more data |
+| Some data | Cell 2              |           |
 
 | FIELD TYPES | FIELD OPTIONS | TEMPLATES |
 | :---         |     :---:      |          ---: |
