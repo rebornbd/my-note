@@ -45,7 +45,7 @@ ManyToManyField
 				<h5>TimeField</h5>
 				<h5>URLField</h5>
 				<h5>UUIDField</h5>
-				<h5>---</h5>
+				<h5></h5>
 			</td>
 			<td>
 				<h6>null</h6>
@@ -67,7 +67,7 @@ ManyToManyField
 				<h6>unique_for_year</h6>
 				<h6>verbose_name</h6>
 				<h6>validators</h6>
-				<h5>---</h5>
+				<h5></h5>
 			</td>
         </tr>
     </tbody>
