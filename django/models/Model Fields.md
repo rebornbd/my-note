@@ -9,7 +9,7 @@ ManyToManyField
     <thead>
         <tr>
             <th colspan=3>FIELD TYPES</th>
-			<th>``</th>
+			<th>```-```</th>
 			<th colspan=2>FIELD OPTIONS</th>
         </tr>
     </thead>
