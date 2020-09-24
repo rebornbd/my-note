@@ -16,31 +16,31 @@ ManyToManyField
 		<tr>
             <td>
 		    		<h5>AutoField</h5>
-				BigAutoField		<br />
-				BigIntegerField		<br />
-				BinaryField		<br />
-				BooleanField		<br />
-				CharField		<br />
-				DateField		<br />
-				DateTimeField		<br />
-				DecimalField		<br />
-				DurationField		<br />
-				EmailField		<br />
-				FileField		<br />
-				FilePathField		<br />
-				FloatField		<br />
-				ImageField		<br />
-				IntegerField		<br />
-				GenericIPAddressField		<br />
-				NullBooleanField		<br />
-				PositiveIntegerField		<br />
-				PositiveSmallIntegerField		<br />
-				SlugField		<br />
-				SmallIntegerField		<br />
-				TextField		<br />
-				TimeField		<br />
-				URLField		<br />
-				UUIDField		<br />
+				<h5>BigAutoField</h5>
+				<h5>BigIntegerField</h5>
+				<h5>BinaryField</h5>
+				<h5>BooleanField</h5>
+				<h5>CharField</h5>
+				<h5>DateField</h5>
+				<h5>DateTimeField</h5>
+				<h5>DecimalField</h5>
+				<h5>DurationField</h5>
+				<h5>EmailField</h5>
+				<h5>FileField</h5>
+				<h5>FilePathField</h5>
+				<h5>FloatField</h5>
+				<h5>ImageField</h5>
+				<h5>IntegerField</h5>
+				<h5>GenericIPAddressField</h5>
+				<h5>NullBooleanField</h5>
+				<h5>PositiveIntegerField</h5>
+				<h5>PositiveSmallIntegerField</h5>
+				<h5>SlugField</h5>
+				<h5>SmallIntegerField</h5>
+				<h5>TextField</h5>
+				<h5>TimeField</h5>
+				<h5>URLField</h5>
+				<h5>UUIDField</h5>
 			</td>
             <td>
 				null		<br />
