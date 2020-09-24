@@ -1,18 +1,23 @@
-# relationship fields
+# relationship fields | field types | field options
 ```python
 # relationship fields
-OneToOneField
-ForeignKey
-ManyToManyField
+OneToOneField		ForeignKey		ManyToManyField
 
 # field types
-AutoField		DurationField			PositiveIntegerField		DateTimeField
-BigAutoField		EmailField			PositiveSmallIntegerField	DecimalField
-BigIntegerField		FileField			SlugField			GenericIPAddressField
-BinaryField		FilePathField			SmallIntegerField		UUIDField
-BooleanField		FloatField			TextField			NullBooleanField
-CharField		ImageField			TimeField
-DateField		IntegerField			URLField
+AutoField		DurationField		PositiveIntegerField		DateTimeField
+BigAutoField		EmailField		PositiveSmallIntegerField	DecimalField
+BigIntegerField		FileField		SlugField			GenericIPAddressField
+BinaryField		FilePathField		SmallIntegerField		UUIDField
+BooleanField		FloatField		TextField			NullBooleanField
+CharField		ImageField		TimeField
+DateField		IntegerField		URLField
+
+# field options
+null			db_tablespace		primary_key			verbose_name
+blank			default			unique				validators
+choices			editable		unique_for_date
+db_column		error_messages		unique_for_month
+db_index		help_text		unique_for_year
 ```
 
 <table>
