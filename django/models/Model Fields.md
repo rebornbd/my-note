@@ -31,23 +31,23 @@ ManyToManyField
 				<h5>FilePathField</h5>
 			</td>
             <td>
-				<h5>null</h5>
-				<h5>blank</h5>
-				<h5>choices</h5>
-				<h5>db_column</h5>
-				<h5>db_index</h5>
-				<h5>db_tablespace</h5>
-				<h5>default</h5>
-				<h5>editable</h5>
-				<h5>error_messages</h5>
-				<h5>help_text</h5>
-				<h5>primary_key</h5>
-				<h5>unique</h5>
-				<h5>unique_for_date</h5>
-				<h5>unique_for_month</h5>
-				<h5>unique_for_year</h5>
-				<h5>verbose_name</h5>
-				<h5>validators</h5>
+				<h6>null</h6>
+				<h6>blank</h6>
+				<h6>choices</h6>
+				<h6>db_column</h6>
+				<h6>db_index</h6>
+				<h6>db_tablespace</h6>
+				<h6>default</h6>
+				<h6>editable</h6>
+				<h6>error_messages</h6>
+				<h6>help_text</h6>
+				<h6>primary_key</h6>
+				<h6>unique</h6>
+				<h6>unique_for_date</h6>
+				<h6>unique_for_month</h6>
+				<h6>unique_for_year</h6>
+				<h6>verbose_name</h6>
+				<h6>validators</h6>
 			</td>
 			<td>
 				<h5>FloatField</h5>
