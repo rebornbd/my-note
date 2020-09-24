@@ -29,45 +29,45 @@ ManyToManyField
 				<p>DurationField</p>
 				<p>EmailField</p>
 				<p>FileField</p>
-				<p>FilePathField</h5>
-				<p>FloatField</h5>
-				<p>ImageField</h5>
-				<p>IntegerField</h5>
-				<p>GenericIPAddressField</h5>
-				<p>NullBooleanField</h5>
+				<p>FilePathField</p>
+				<p>FloatField</p>
+				<p>ImageField</p>
+				<p>IntegerField</p>
+				<p>GenericIPAddressField</p>
+				<p>NullBooleanField</p>
 			</td>
 			<td>
-				<h5>PositiveIntegerField</h5>
-				<h5>PositiveSmallIntegerField</h5>
-				<h5>SlugField</h5>
-				<h5>SmallIntegerField</h5>
-				<h5>TextField</h5>
-				<h5>TimeField</h5>
-				<h5>URLField</h5>
-				<h5>UUIDField</h5>
-				<h5></h5>
+				<p>PositiveIntegerField</p>
+				<p>PositiveSmallIntegerField</p>
+				<p>SlugField</p>
+				<p>SmallIntegerField</p>
+				<p>TextField</p>
+				<p>TimeField</p>
+				<p>URLField</p>
+				<p>UUIDField</p>
+				<p></p>
 			</td>
 			<td>
-				<h6>null</h6>
-				<h6>blank</h6>
-				<h6>choices</h6>
-				<h6>db_column</h6>
-				<h6>db_index</h6>
-				<h6>db_tablespace</h6>
-				<h6>default</h6>
-				<h6>editable</h6>
-				<h6>error_messages</h6>
+				<p>null</p>
+				<p>blank</p>
+				<p>choices</p>
+				<p>db_column</p>
+				<p>db_index</p>
+				<p>db_tablespace</p>
+				<p>default</p>
+				<p>editable</p>
+				<p>error_messages</p>
 			</td>
 			<td>
-				<h6>help_text</h6>
-				<h6>primary_key</h6>
-				<h6>unique</h6>
-				<h6>unique_for_date</h6>
-				<h6>unique_for_month</h6>
-				<h6>unique_for_year</h6>
-				<h6>verbose_name</h6>
-				<h6>validators</h6>
-				<h5></h5>
+				<p>help_text</p>
+				<p>primary_key</p>
+				<p>unique</p>
+				<p>unique_for_date</p>
+				<p>unique_for_month</p>
+				<p>unique_for_year</p>
+				<p>verbose_name</p>
+				<p>validators</p>
+				<p></p>
 			</td>
         </tr>
     </tbody>
