@@ -5,6 +5,11 @@ ForeignKey
 ManyToManyField
 ```
 
+| FIELD TYPES | FIELD OPTIONS | TEMPLATES |
+| :---         |     :---:      |          ---: |
+| SmallIntegerField   | blank,null, default     | number    |
+| IntegerField     | blank,null, default       | number      |
+
 # field types
 ```python
 AutoField
