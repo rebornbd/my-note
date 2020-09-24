@@ -14,6 +14,66 @@ ManyToManyField
     </thead>
     <tbody>
 		<tr>
+            <td>
+				AutoField		<br />
+				BigAutoField		<br />
+				BigIntegerField		<br />
+				BinaryField		<br />
+				BooleanField		<br />
+				CharField		<br />
+				DateField		<br />
+				DateTimeField		<br />
+				DecimalField		<br />
+				DurationField		<br />
+				EmailField		<br />
+				FileField		<br />
+				FilePathField		<br />
+				FloatField		<br />
+				ImageField		<br />
+				IntegerField		<br />
+				GenericIPAddressField		<br />
+				NullBooleanField		<br />
+				PositiveIntegerField		<br />
+				PositiveSmallIntegerField		<br />
+				SlugField		<br />
+				SmallIntegerField		<br />
+				TextField		<br />
+				TimeField		<br />
+				URLField		<br />
+				UUIDField		<br />
+			</td>
+            <td>
+				null		<br />
+				blank		<br />
+				choices		<br />
+				db_column		<br />
+				db_index		<br />
+				db_tablespace		<br />
+				default		<br />
+				editable		<br />
+				error_messages		<br />
+				help_text		<br />
+				primary_key		<br />
+				unique		<br />
+				unique_for_date		<br />
+				unique_for_month		<br />
+				unique_for_year		<br />
+				verbose_name		<br />
+				validators		<br />
+			</td>
+        </tr>
+    </tbody>
+</table>
+
+<table>
+    <thead>
+        <tr>
+            <th>FIELD TYPES</th>
+            <th>FIELD OPTIONS</th>
+        </tr>
+    </thead>
+    <tbody>
+		<tr>
             <td>SmallIntegerField</td>
             <td rowspan=4>
 		null <br />
@@ -95,15 +155,12 @@ ManyToManyField
         </tr>
 		<tr>
             <td>SlugField</td>
-            <td></td>
         </tr>
 		<tr>
             <td>URLField</td>
-            <td></td>
         </tr>
 		<tr>
             <td>UUIDField</td>
-            <td></td>
         </tr>
     </tbody>
 </table>
