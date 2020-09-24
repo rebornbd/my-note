@@ -5,6 +5,16 @@ ForeignKey
 ManyToManyField
 ```
 
+<table>
+  <tr>
+    <td>One</td>
+    <td>Two</td>
+  </tr>
+  <tr>
+    <td colspan="2">Three</td>
+  </tr>
+</table>
+
 | FIELD TYPES | FIELD OPTIONS | TEMPLATES |
 | :---         |     :---:      |          ---: |
 | SmallIntegerField   | blank,null, default     | number    |
