@@ -1,4 +1,4 @@
-# relationship fields | field types | field options
+### relationship fields | field types | field options
 ```python
 # relationship fields
 OneToOneField		ForeignKey		ManyToManyField
@@ -97,36 +97,3 @@ db_index		help_text		unique_for_year
 | IntegerField     | blank,null, default       | number      |
 | BigIntegerField     | blank,null, default       | number      |
 
-# field types
-```python
-AutoField		DurationField			PositiveIntegerField
-BigAutoField		EmailField			PositiveSmallIntegerField
-BigIntegerField		FileField			SlugField
-BinaryField		FilePathField			SmallIntegerField
-BooleanField		FloatField			TextField
-CharField		ImageField			TimeField
-DateField		IntegerField			URLField
-DateTimeField		GenericIPAddressField		UUIDField
-DecimalField		NullBooleanField
-```
-
-# field options
-```python
-null
-blank
-choices
-db_column
-db_index
-db_tablespace
-default
-editable
-error_messages
-help_text
-primary_key
-unique
-unique_for_date
-unique_for_month
-unique_for_year
-verbose_name
-validators
-```
