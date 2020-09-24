@@ -29,10 +29,10 @@ ManyToManyField
 				<h5>EmailField</h5>
 				<h5>FileField</h5>
 				<h5>FilePathField</h5>
-				<h5>---</h5>
-				<h5>---</h5>
-				<h5>---</h5>
-		                <h5>---</h5>
+				<h5></h5>
+				<h5></h5>
+				<h5></h5>
+		                <h5></h5>
 			</td>
             <td>
 				<h6>null</h6>
