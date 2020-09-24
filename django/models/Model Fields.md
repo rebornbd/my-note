@@ -1,8 +1,18 @@
 # relationship fields
 ```python
+# relationship fields
 OneToOneField
 ForeignKey
 ManyToManyField
+
+# field types
+AutoField		DurationField			PositiveIntegerField		DateTimeField
+BigAutoField		EmailField			PositiveSmallIntegerField	DecimalField
+BigIntegerField		FileField			SlugField			GenericIPAddressField
+BinaryField		FilePathField			SmallIntegerField		UUIDField
+BooleanField		FloatField			TextField			NullBooleanField
+CharField		ImageField			TimeField
+DateField		IntegerField			URLField
 ```
 
 <table>
