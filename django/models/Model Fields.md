@@ -84,32 +84,15 @@ ManyToManyField
 
 # field types
 ```python
-AutoField
-BigAutoField
-BigIntegerField
-BinaryField
-BooleanField
-CharField
-DateField
-DateTimeField
-DecimalField
-DurationField
-EmailField
-FileField
-FilePathField
-FloatField
-ImageField
-IntegerField
-GenericIPAddressField
-NullBooleanField
-PositiveIntegerField
-PositiveSmallIntegerField
-SlugField
-SmallIntegerField
-TextField
-TimeField
-URLField
-UUIDField
+AutoField		DurationField			PositiveIntegerField
+BigAutoField		EmailField			PositiveSmallIntegerField
+BigIntegerField		FileField			SlugField
+BinaryField		FilePathField			SmallIntegerField
+BooleanField		FloatField			TextField
+CharField		ImageField			TimeField
+DateField		IntegerField			URLField
+DateTimeField		GenericIPAddressField		UUIDField
+DecimalField		NullBooleanField
 ```
 
 # field options
