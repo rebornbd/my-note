@@ -8,8 +8,8 @@ ManyToManyField
 <table>
     <thead>
         <tr>
-            <th style="color: red;">FIELD TYPES</th>
-            <th style="color: red;">FIELD OPTIONS</th>
+            <th style="color: #F9826C;">FIELD TYPES</th>
+            <th style="color: #F9826C;">FIELD OPTIONS</th>
         </tr>
     </thead>
     <tbody>
