@@ -8,14 +8,14 @@ ManyToManyField
 <table>
     <thead>
         <tr>
-            <th style="color: #F9826C;">FIELD TYPES</th>
-            <th style="color: #F9826C;">FIELD OPTIONS</th>
+            <th>FIELD TYPES</th>
+            <th>FIELD OPTIONS</th>
         </tr>
     </thead>
     <tbody>
 		<tr>
             <td>
-				AutoField		<br />
+		    <h1>AutoField</h1>		<br />
 				BigAutoField		<br />
 				BigIntegerField		<br />
 				BinaryField		<br />
