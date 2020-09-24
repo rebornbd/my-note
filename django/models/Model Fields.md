@@ -29,12 +29,15 @@ ManyToManyField
 				<h5>EmailField</h5>
 				<h5>FileField</h5>
 				<h5>FilePathField</h5>
+				<h5></h5>
+				<h5></h5>
+				<h5></h5>
 			</td>
             <td>
-				<p>null</p>
-				<p>blank</p>
-				<p>choices</p>
-				<p>db_column</p>
+				<h6>null</h6>
+				<h6>blank</h6>
+				<h6>choices</h6>
+				<h6>db_column</h6>
 				<h6>db_index</h6>
 				<h6>db_tablespace</h6>
 				<h6>default</h6>
@@ -63,6 +66,9 @@ ManyToManyField
 				<h5>TimeField</h5>
 				<h5>URLField</h5>
 				<h5>UUIDField</h5>
+				<h5></h5>
+				<h5></h5>
+				<h5></h5>
 			</td>
         </tr>
     </tbody>
