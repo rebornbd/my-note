@@ -31,10 +31,10 @@ ManyToManyField
 				<h5>FilePathField</h5>
 			</td>
             <td>
-				<h6>null</h6>
-				<h6>blank</h6>
-				<h6>choices</h6>
-				<h6>db_column</h6>
+				<p>null</p>
+				<p>blank</p>
+				<p>choices</p>
+				<p>db_column</p>
 				<h6>db_index</h6>
 				<h6>db_tablespace</h6>
 				<h6>default</h6>
