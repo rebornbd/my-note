@@ -10,12 +10,13 @@ ManyToManyField
         <tr>
             <th>FIELD TYPES</th>
             <th>FIELD OPTIONS</th>
+			<th>FIELD TYPES</th>
         </tr>
     </thead>
     <tbody>
 		<tr>
             <td>
-		    		<h5>AutoField</h5>
+		    	<h5>AutoField</h5>
 				<h5>BigAutoField</h5>
 				<h5>BigIntegerField</h5>
 				<h5>BinaryField</h5>
@@ -28,6 +29,27 @@ ManyToManyField
 				<h5>EmailField</h5>
 				<h5>FileField</h5>
 				<h5>FilePathField</h5>
+			</td>
+            <td>
+				<h5>null</h5>
+				<h5>blank</h5>
+				<h5>choices</h5>
+				<h5>db_column</h5>
+				<h5>db_index</h5>
+				<h5>db_tablespace</h5>
+				<h5>default</h5>
+				<h5>editable</h5>
+				<h5>error_messages</h5>
+				<h5>help_text</h5>
+				<h5>primary_key</h5>
+				<h5>unique</h5>
+				<h5>unique_for_date</h5>
+				<h5>unique_for_month</h5>
+				<h5>unique_for_year</h5>
+				<h5>verbose_name</h5>
+				<h5>validators</h5>
+			</td>
+			<td>
 				<h5>FloatField</h5>
 				<h5>ImageField</h5>
 				<h5>IntegerField</h5>
@@ -41,25 +63,6 @@ ManyToManyField
 				<h5>TimeField</h5>
 				<h5>URLField</h5>
 				<h5>UUIDField</h5>
-			</td>
-            <td>
-				null		<br />
-				blank		<br />
-				choices		<br />
-				db_column		<br />
-				db_index		<br />
-				db_tablespace		<br />
-				default		<br />
-				editable		<br />
-				error_messages		<br />
-				help_text		<br />
-				primary_key		<br />
-				unique		<br />
-				unique_for_date		<br />
-				unique_for_month		<br />
-				unique_for_year		<br />
-				verbose_name		<br />
-				validators		<br />
 			</td>
         </tr>
     </tbody>
