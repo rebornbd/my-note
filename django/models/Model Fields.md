@@ -36,7 +36,9 @@ ManyToManyField
         <tr>
             <td>DecimalField</td>
         </tr>
-        <tr></tr>
+        <tr>
+            <td colspan=3></td>
+        </tr>
         <tr>
             <td>BooleanField</td>
             <td rowspan=2>blank,null, default</td>
