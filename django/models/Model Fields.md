@@ -15,7 +15,7 @@ ManyToManyField
     <tbody>
 		<tr>
             <td>
-		    <h1>AutoField</h1>		<br />
+		    <h5>AutoField</h5>		<br />
 				BigAutoField		<br />
 				BigIntegerField		<br />
 				BinaryField		<br />
