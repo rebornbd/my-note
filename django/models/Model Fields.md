@@ -11,6 +11,8 @@ ManyToManyField
             <th>FIELD TYPES</th>
             <th>FIELD OPTIONS</th>
 			<th>FIELD TYPES</th>
+			<th>FIELD OPTIONS</th>
+			<th>FIELD TYPES</th>
         </tr>
     </thead>
     <tbody>
@@ -25,14 +27,6 @@ ManyToManyField
 				<h5>DateField</h5>
 				<h5>DateTimeField</h5>
 				<h5>DecimalField</h5>
-				<h5>DurationField</h5>
-				<h5>EmailField</h5>
-				<h5>FileField</h5>
-				<h5>FilePathField</h5>
-				<h5>---</h5>
-				<h5>---</h5>
-				<h5>---</h5>
-		                <h5>---</h5>
 			</td>
             <td>
 				<h6>null</h6>
@@ -44,6 +38,19 @@ ManyToManyField
 				<h6>default</h6>
 				<h6>editable</h6>
 				<h6>error_messages</h6>
+			</td>
+			<td>
+				<h5>DurationField</h5>
+				<h5>EmailField</h5>
+				<h5>FileField</h5>
+				<h5>FilePathField</h5>
+				<h5>FloatField</h5>
+				<h5>ImageField</h5>
+				<h5>IntegerField</h5>
+				<h5>GenericIPAddressField</h5>
+				<h5>NullBooleanField</h5>
+			</td>
+			<td>
 				<h6>help_text</h6>
 				<h6>primary_key</h6>
 				<h6>unique</h6>
@@ -52,13 +59,9 @@ ManyToManyField
 				<h6>unique_for_year</h6>
 				<h6>verbose_name</h6>
 				<h6>validators</h6>
+				<h5>---</h5>
 			</td>
 			<td>
-				<h5>FloatField</h5>
-				<h5>ImageField</h5>
-				<h5>IntegerField</h5>
-				<h5>GenericIPAddressField</h5>
-				<h5>NullBooleanField</h5>
 				<h5>PositiveIntegerField</h5>
 				<h5>PositiveSmallIntegerField</h5>
 				<h5>SlugField</h5>
@@ -68,9 +71,6 @@ ManyToManyField
 				<h5>URLField</h5>
 				<h5>UUIDField</h5>
 				<h5>---</h5>
-				<h5>---</h5>
-				<h5>---</h5>
-		                <h5>---</h5>
 			</td>
         </tr>
     </tbody>
