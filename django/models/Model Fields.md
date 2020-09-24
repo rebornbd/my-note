@@ -8,11 +8,8 @@ ManyToManyField
 <table>
     <thead>
         <tr>
-            <th>FIELD TYPES</th>
-            <th>FIELD OPTIONS</th>
-			<th>FIELD TYPES</th>
-			<th>FIELD OPTIONS</th>
-			<th>FIELD TYPES</th>
+            <th colspan=3>FIELD TYPES</th>
+			<th colspan=2>FIELD OPTIONS</th>
         </tr>
     </thead>
     <tbody>
@@ -28,17 +25,6 @@ ManyToManyField
 				<h5>DateTimeField</h5>
 				<h5>DecimalField</h5>
 			</td>
-            <td>
-				<h6>null</h6>
-				<h6>blank</h6>
-				<h6>choices</h6>
-				<h6>db_column</h6>
-				<h6>db_index</h6>
-				<h6>db_tablespace</h6>
-				<h6>default</h6>
-				<h6>editable</h6>
-				<h6>error_messages</h6>
-			</td>
 			<td>
 				<h5>DurationField</h5>
 				<h5>EmailField</h5>
@@ -51,17 +37,6 @@ ManyToManyField
 				<h5>NullBooleanField</h5>
 			</td>
 			<td>
-				<h6>help_text</h6>
-				<h6>primary_key</h6>
-				<h6>unique</h6>
-				<h6>unique_for_date</h6>
-				<h6>unique_for_month</h6>
-				<h6>unique_for_year</h6>
-				<h6>verbose_name</h6>
-				<h6>validators</h6>
-				<h5>---</h5>
-			</td>
-			<td>
 				<h5>PositiveIntegerField</h5>
 				<h5>PositiveSmallIntegerField</h5>
 				<h5>SlugField</h5>
@@ -70,6 +45,28 @@ ManyToManyField
 				<h5>TimeField</h5>
 				<h5>URLField</h5>
 				<h5>UUIDField</h5>
+				<h5>---</h5>
+			</td>
+			<td>
+				<h6>null</h6>
+				<h6>blank</h6>
+				<h6>choices</h6>
+				<h6>db_column</h6>
+				<h6>db_index</h6>
+				<h6>db_tablespace</h6>
+				<h6>default</h6>
+				<h6>editable</h6>
+				<h6>error_messages</h6>
+			</td>
+			<td>
+				<h6>help_text</h6>
+				<h6>primary_key</h6>
+				<h6>unique</h6>
+				<h6>unique_for_date</h6>
+				<h6>unique_for_month</h6>
+				<h6>unique_for_year</h6>
+				<h6>verbose_name</h6>
+				<h6>validators</h6>
 				<h5>---</h5>
 			</td>
         </tr>
