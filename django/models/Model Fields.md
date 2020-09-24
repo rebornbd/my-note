@@ -18,23 +18,23 @@ ManyToManyField
 		    	<p>AutoField</p>
 				<p>BigAutoField</p>
 				<p>BigIntegerField</p>
-				<h5>BinaryField</h5>
-				<h5>BooleanField</h5>
-				<h5>CharField</h5>
-				<h5>DateField</h5>
-				<h5>DateTimeField</h5>
-				<h5>DecimalField</h5>
+				<p>BinaryField</p>
+				<p>BooleanField</p>
+				<p>CharField</p>
+				<p>DateField</p>
+				<p>DateTimeField</p>
+				<p>DecimalField</p>
 			</td>
 			<td>
-				<h5>DurationField</h5>
-				<h5>EmailField</h5>
-				<h5>FileField</h5>
-				<h5>FilePathField</h5>
-				<h5>FloatField</h5>
-				<h5>ImageField</h5>
-				<h5>IntegerField</h5>
-				<h5>GenericIPAddressField</h5>
-				<h5>NullBooleanField</h5>
+				<p>DurationField</p>
+				<p>EmailField</p>
+				<p>FileField</p>
+				<p>FilePathField</h5>
+				<p>FloatField</h5>
+				<p>ImageField</h5>
+				<p>IntegerField</h5>
+				<p>GenericIPAddressField</h5>
+				<p>NullBooleanField</h5>
 			</td>
 			<td>
 				<h5>PositiveIntegerField</h5>
