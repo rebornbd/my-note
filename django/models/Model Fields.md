@@ -9,7 +9,7 @@ ManyToManyField
     <thead>
         <tr>
             <th colspan=3>FIELD TYPES</th>
-		<span style="color:orange;"><th></th></span>
+		<th></th>
 			<th colspan=2>FIELD OPTIONS</th>
         </tr>
     </thead>
@@ -46,9 +46,9 @@ ManyToManyField
 				<p>TimeField</p>
 				<p>URLField</p>
 				<p>UUIDField</p>
-				<p>.</p>
+				<p>-</p>
 			</td>
-			<td>``</td>
+			<td></td>
 			<td>
 				<p>null</p>
 				<p>blank</p>
@@ -69,7 +69,7 @@ ManyToManyField
 				<p>unique_for_year</p>
 				<p>verbose_name</p>
 				<p>validators</p>
-				<p>.</p>
+				<p>-</p>
 			</td>
         </tr>
     </tbody>
