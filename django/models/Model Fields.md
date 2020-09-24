@@ -4,6 +4,108 @@ OneToOneField
 ForeignKey
 ManyToManyField
 ```
+
+<table>
+    <thead>
+        <tr>
+            <th>FIELD TYPES</th>
+            <th>FIELD OPTIONS</th>
+        </tr>
+    </thead>
+    <tbody>
+		<tr>
+            <td>SmallIntegerField</td>
+            <td rowspan=4>null</td>
+        </tr>
+		<tr>
+            <td>IntegerField</td>
+        </tr>
+		<tr>
+            <td>BigIntegerField</td>
+        </tr>
+		<tr>
+            <td>PositiveSmallIntegerField</td>
+            <td></td>
+        </tr>
+		<tr>
+            <td>PositiveIntegerField</td>
+            <td>blank</td>
+        </tr>
+		<tr>
+            <td>FloatField</td>
+            <td>choices</td>
+        </tr>
+		<tr>
+            <td>DecimalField</td>
+            <td>db_index</td>
+        </tr>
+		<tr>
+            <td>BooleanField</td>
+            <td>db_tablespace</td>
+        </tr>
+		<tr>
+            <td>NullBooleanField</td>
+            <td>default</td>
+        </tr>
+		<tr>
+            <td>CharField</td>
+            <td>editable</td>
+        </tr>
+		<tr>
+            <td>TextField</td>
+            <td>error_messages</td>
+        </tr>
+		<tr>
+            <td>EmailField</td>
+            <td>help_text</td>
+        </tr>
+		<tr>
+            <td>DateField</td>
+            <td>primary_key</td>
+        </tr>
+		<tr>
+            <td>TimeField</td>
+            <td>unique</td>
+        </tr>
+		<tr>
+            <td>DateTimeField</td>
+            <td>unique_for_date</td>
+        </tr>
+		<tr>
+            <td>FileField</td>
+            <td>unique_for_month</td>
+        </tr>
+		<tr>
+            <td>FilePathField</td>
+            <td>unique_for_year</td>
+        </tr>
+		<tr>
+            <td>ImageField</td>
+            <td>verbose_name</td>
+        </tr>
+		<tr>
+            <td>GenericIPAddressField</td>
+            <td>validators</td>
+        </tr>
+		<tr>
+            <td>DurationField</td>
+            <td rowspan=4>db_column</td>
+        </tr>
+		<tr>
+            <td>SlugField</td>
+            <td></td>
+        </tr>
+		<tr>
+            <td>URLField</td>
+            <td></td>
+        </tr>
+		<tr>
+            <td>UUIDField</td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
+
 <table>
     <thead>
         <tr>
