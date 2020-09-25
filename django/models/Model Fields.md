@@ -145,7 +145,141 @@ db_index		help_text		unique_for_year
 				select
 			</td>
 			<td>
-				< select> < / select>
+				< select> < /select>
+			</td>
+        </tr>
+		<tr>
+            <td>
+		    	<p>CharField</p>
+			</td>
+			<td>
+				<p>null</p>
+				<p>blank</p>
+				<p>default</p>
+			</td>
+			<td>
+				text
+			</td>
+			<td>
+				< input type="text" />
+			</td>
+        </tr>
+		<tr>
+            <td>
+		    	<p>TextField</p>
+			</td>
+			<td>
+				<p>null</p>
+				<p>blank</p>
+				<p>default</p>
+			</td>
+			<td>
+				textarea
+			</td>
+			<td>
+				< textarea> < /textarea>
+			</td>
+        </tr>
+		<tr>
+            <td>
+		    	<p>EmailField</p>
+			</td>
+			<td>
+				<p>null</p>
+				<p>blank</p>
+				<p>default</p>
+			</td>
+			<td>
+				email
+			</td>
+			<td>
+				< input type="email" />
+			</td>
+        </tr>
+		<tr>
+            <td>
+		    	<p>DateField</p>
+				<p>TimeField</p>
+				<p>DateTimeField</p>
+			</td>
+			<td>
+				<p>null</p>
+				<p>blank</p>
+				<p>default</p>
+			</td>
+			<td>
+				text (date)
+			</td>
+			<td>
+				< input type="text" />
+			</td>
+        </tr>
+		<tr>
+            <td>
+		    	<p>FileField</p>
+				<p>ImageField</p>
+			</td>
+			<td>
+				<p>null</p>
+				<p>blank</p>
+				<p>default</p>
+			</td>
+			<td>
+				file
+			</td>
+			<td>
+				< input type="file" />
+			</td>
+        </tr>
+		<tr>
+            <td>
+		    	<p>FilePathField</p>
+			</td>
+			<td>
+				<p>null</p>
+				<p>blank</p>
+				<p>default</p>
+			</td>
+			<td>
+				select
+			</td>
+			<td>
+				< select> < /select>
+			</td>
+        </tr>
+		<tr>
+            <td>
+		    	<p>GenericIPAddressField</p>
+				<p>DurationField</p>
+			</td>
+			<td>
+				<p>null</p>
+				<p>blank</p>
+				<p>default</p>
+			</td>
+			<td>
+				text
+			</td>
+			<td>
+				< input type="text" />
+			</td>
+        </tr>
+		<tr>
+            <td>
+		    	<p>SlugField</p>
+				<p>URLField</p>
+				<p>UUIDField</p>
+			</td>
+			<td>
+				<p>null</p>
+				<p>blank</p>
+				<p>default</p>
+			</td>
+			<td>
+				text
+			</td>
+			<td>
+				< input type="text" />
 			</td>
         </tr>
     </tbody>
