@@ -120,9 +120,7 @@ db_index		help_text		unique_for_year
 				<p>DecimalField</p>
 			</td>
 			<td>
-				<p>null</p>
-				<p>blank</p>
-				<p>default</p>
+				null, blank, default
 			</td>
 			<td>
 				number
@@ -137,9 +135,7 @@ db_index		help_text		unique_for_year
 				<p>NullBooleanField</p>
 			</td>
 			<td>
-				<p>null</p>
-				<p>blank</p>
-				<p>default</p>
+				null, blank, default
 			</td>
 			<td>
 				select
@@ -153,9 +149,7 @@ db_index		help_text		unique_for_year
 		    	<p>CharField</p>
 			</td>
 			<td>
-				<p>null</p>
-				<p>blank</p>
-				<p>default</p>
+				null, blank, default
 			</td>
 			<td>
 				text
@@ -169,9 +163,7 @@ db_index		help_text		unique_for_year
 		    	<p>TextField</p>
 			</td>
 			<td>
-				<p>null</p>
-				<p>blank</p>
-				<p>default</p>
+				null, blank, default
 			</td>
 			<td>
 				textarea
@@ -185,9 +177,7 @@ db_index		help_text		unique_for_year
 		    	<p>EmailField</p>
 			</td>
 			<td>
-				<p>null</p>
-				<p>blank</p>
-				<p>default</p>
+				null, blank, default
 			</td>
 			<td>
 				email
@@ -203,9 +193,7 @@ db_index		help_text		unique_for_year
 				<p>DateTimeField</p>
 			</td>
 			<td>
-				<p>null</p>
-				<p>blank</p>
-				<p>default</p>
+				null, blank, default
 			</td>
 			<td>
 				text (date)
@@ -220,9 +208,7 @@ db_index		help_text		unique_for_year
 				<p>ImageField</p>
 			</td>
 			<td>
-				<p>null</p>
-				<p>blank</p>
-				<p>default</p>
+				null, blank, default
 			</td>
 			<td>
 				file
@@ -236,9 +222,7 @@ db_index		help_text		unique_for_year
 		    	<p>FilePathField</p>
 			</td>
 			<td>
-				<p>null</p>
-				<p>blank</p>
-				<p>default</p>
+				null, blank, default
 			</td>
 			<td>
 				select
@@ -253,9 +237,7 @@ db_index		help_text		unique_for_year
 				<p>DurationField</p>
 			</td>
 			<td>
-				<p>null</p>
-				<p>blank</p>
-				<p>default</p>
+				null, blank, default
 			</td>
 			<td>
 				text
@@ -271,9 +253,7 @@ db_index		help_text		unique_for_year
 				<p>UUIDField</p>
 			</td>
 			<td>
-				<p>null</p>
-				<p>blank</p>
-				<p>default</p>
+				null, blank, default
 			</td>
 			<td>
 				text
