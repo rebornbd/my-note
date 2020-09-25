@@ -145,7 +145,7 @@ db_index		help_text		unique_for_year
 				select
 			</td>
 			<td>
-				`<select></select>`
+				< select></select>
 			</td>
         </tr>
     </tbody>
