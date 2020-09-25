@@ -99,9 +99,55 @@ db_index		help_text		unique_for_year
 </table>
 
 
-| FIELD TYPES | FIELD OPTIONS | TEMPLATES |
-| :---         |     :---:      |          ---: |
-| SmallIntegerField   | blank,null, default     | number    |
-| IntegerField     | blank,null, default       | number      |
-| BigIntegerField     | blank,null, default       | number      |
+<table>
+    <thead>
+        <tr>
+            <th>FIELD TYPES</th>
+            <th>FIELD OPTIONS</th>
+			<th>TEMPLATES</th>
+			<th>EXAMPLE</th>
+        </tr>
+    </thead>
+    <tbody>
+		<tr>
+            <td>
+		    	<p>SmallIntegerField</p>
+				<p>IntegerField</p>
+				<p>BigIntegerField</p>
+				<p>PositiveSmallIntegerField</p>
+				<p>PositiveIntegerField</p>
+				<p>FloatField</p>
+				<p>DecimalField</p>
+			</td>
+			<td>
+				<p>null</p>
+				<p>blank</p>
+				<p>default</p>
+			</td>
+			<td>
+				number
+			</td>
+			<td>
+				<input type='number' />
+			</td>
+        </tr>
+		<tr>
+            <td>
+		    	<p>BooleanField</p>
+				<p>NullBooleanField</p>
+			</td>
+			<td>
+				<p>null</p>
+				<p>blank</p>
+				<p>default</p>
+			</td>
+			<td>
+				select
+			</td>
+			<td>
+				<select></select>
+			</td>
+        </tr>
+    </tbody>
+</table>
 
