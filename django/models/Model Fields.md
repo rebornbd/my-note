@@ -128,9 +128,7 @@ db_index		help_text		unique_for_year
 				number
 			</td>
 			<td>	
-				<pre>
-				 < input type='number'
-				</pre>
+				< input type='number' />
 			</td>
         </tr>
 		<tr>
