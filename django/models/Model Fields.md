@@ -16,9 +16,16 @@ DateField		IntegerField		URLField
 # field options
 null			db_tablespace		primary_key			verbose_name
 blank			default			unique				validators
-choices			editable		unique_for_date
+choices			editable		unique_for_date			max_length
 db_column		error_messages		unique_for_month
 db_index		help_text		unique_for_year
+
+# field option default value
+null = False		db_tablespace = None	primary_key = False		auto_created = False
+blank =  False		default=NOT_PROVIDED	unique = False			validators = []
+choices = []		editable = True		unique_for_date = None		serialize = True
+db_column = None	error_messages = None	unique_for_month = None		max_length = None
+db_index = False	help_text = ''		unique_for_year = None
 ```
 
 <table>
