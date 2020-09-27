@@ -1,7 +1,8 @@
 ### relationship fields | field types | field options
 ```python
 # relationship fields
-OneToOneField		ForeignKey		ManyToManyField
+OneToOneField		GenericForeignKey	ForeignKey			ManyToManyField
+			(oneToMany)		(manyToOne)
 
 # field types
 AutoField		DurationField		PositiveIntegerField		DateTimeField
