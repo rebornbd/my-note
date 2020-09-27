@@ -100,7 +100,7 @@ class Book(models.Model):
 >>> Book.objects.all()[0].authors.add(new_author.id)    # [new_author.id == 4] <--> Book.objects.all()[0].authors.add(4)
 
 # remove author
->>> >>> new_author = Author.objects.all()[3]
+>>> new_author = Author.objects.all()[3]
 >>> Book.objects.all()[0].authors.remove(new_author.id)
 ```
 
