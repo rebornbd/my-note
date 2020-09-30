@@ -50,7 +50,7 @@ templates
 
 #### custom.admin.css (static/css/admin/custom.admin.css)
 ```css
-.module h2, .module caption, .inline-group h2,#header {   
+.module h2, .module caption, .inline-group h2, #header {   
     /* margin: 0;
     padding: 2px 5px 3px 5px; */
     font-size: 11px;
