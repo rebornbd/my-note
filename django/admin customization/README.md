@@ -16,11 +16,11 @@ templates
 |     +----- 500.html
 |
 +-----registration
-      |
-      +----- logged_out.html
-      +----- password_change_form.html
-      +----- password_reset_form.html
-      +----- password_reset_email.html
+|     |
+|     +----- logged_out.html
+|     +----- password_change_form.html
+|     +----- password_reset_form.html
+|     +----- password_reset_email.html
 ```
 
 
