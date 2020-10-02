@@ -107,3 +107,13 @@ raise ValidationError({
     'create_at': ValidationError(_('Invalid date'), code='invalid'),
 })
 ```
+
+### other instance methods
+```python
+# Model.get_FOO_display() [for every field that has choices set]
+>>> p = Person.objects.get(id=1)
+>>> p.gender
+'M'
+>>> p.get_gender_display()  # returns the “human-readable” value of the field
+'Male'
+```
