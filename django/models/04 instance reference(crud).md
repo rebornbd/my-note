@@ -36,6 +36,47 @@ class Entry(models.Model):
         return self.headline
 ```
 
+### creating objects
+
+##### options-01 [add a classmethod on the model class]
+```python
+from django.db import models
+
+class Book(models.Model):
+    title = models.CharField(max_length=100)
+
+    @classmethod
+    def create(cls, title):
+        book = cls(title=title)
+        # do something with the book
+        return book
+
+# quary
+book = Book.create("Pride and Prejudice")
+```
+
+##### options-02 [Add a method on a custom manager (usually preferred)]
+```python
+    def create_book(self, title):
+        book = self.create(title=title)
+        # do something with the book
+        return book
+
+class Book(models.Model):
+    title = models.CharField(max_length=100)
+
+    objects = BookManager()
+
+# query
+book = Book.objects.create_book("Pride and Prejudice")
+```
+
+
+
+
+02) validating objects
+03) saving objects
+04) deleting objects
 -> Model.clean_fields()     [validate the model fields]
 -> Model.clean()            [validate the model as a whole]
 -> Model.validate_unique()  [validate the field uniqueness]
