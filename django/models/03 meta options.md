@@ -1,3 +1,23 @@
+### intro
+```python
+class CommonInfo(models.Model):
+    name = models.CharField(max_length=100)
+    age = models.PositiveIntegerField()
+
+    class Meta:
+        abstract = True    # if abstract is true then can't create db
+
+class Student(CommonInfo):
+    home_group = models.CharField(max_length=5)
+    created_at = models.DateTimeField(auto_now_add=True)
+    
+    class Meta:
+        db_table = 'studentdb'            # db table name for the model
+        verbose_name = 'student'          # a human-readable name for the object, singular, [if class-name: "CseStudent", default verbose_name = "cse student"]
+        verbose_name_plural = 'students'  # the plural name for the object [admin panel list view name]
+        ordering = ['-created_at']
+```
+
 ### model meta options
 ```python
 abstract                    get_latest_by               required_db_features        verbose_name                proxy
