@@ -38,7 +38,7 @@ class Entry(models.Model):
 
 ### creating objects
 
-##### options-01 [add a classmethod on the model class]
+##### option-01 [add a classmethod on the model class]
 ```python
 from django.db import models
 
@@ -55,8 +55,9 @@ class Book(models.Model):
 book = Book.create("Pride and Prejudice")
 ```
 
-##### options-02 [Add a method on a custom manager (usually preferred)]
+##### option-02 [Add a method on a custom manager (usually preferred)]
 ```python
+class BookManager(models.Manager):
     def create_book(self, title):
         book = self.create(title=title)
         # do something with the book
