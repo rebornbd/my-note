@@ -19,4 +19,14 @@ base_manager_name = None        order_with_respect_to = None    select_on_save =
 db_table = ''                   ordering = []                   indexes = []                    default_related_name = None
 db_tablespace =                 permissions = []                unique_together = []            default_permissions = ('add', 'change', 'delete', 'view')
    settings.DEFAULT_TABLESPACE
+
+@property
+def label(self):
+   return '%s.%s' % (self.app_label, self.object_name)
+
+@property
+def label_lower(self):
+   return '%s.%s' % (self.app_label, self.model_name)
+
+NB: object_name = None, model_name = None
 ```
