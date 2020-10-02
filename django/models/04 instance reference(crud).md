@@ -17,6 +17,7 @@ class Person(models.Model):
     email       = models.EmailField(null=True, blank=True)
     gender      = models.CharField(null=True, blank=True, max_length=1, choices=CHOICE_GENDER)
     address     = models.TextField(null=True, blank=True)
+    create_at   = models.DateField()
 ```
 
 ### 01) creating objects
@@ -86,45 +87,23 @@ from django.core.exceptions import ValidationError
 from django.db import models
 from django.utils.translation import gettext_lazy as _
 
-class Article(models.Model):
-    title = models.CharField(max_length=100)
-    status = models.CharField(max_length=100)
-    pub_date = models.DateField()
+class Person(models.Model):
+    ...
+    ...
     
     def clean(self):
-        if self.status == 'draft' and self.pub_date is not None:                        # don't allow draft entries to have a pub_date.
-            raise ValidationError(_('Draft entries may not have a publication date.'))
-        
-        if self.status == 'published' and self.pub_date is None:                        # set the pub_date for published items if it hasn't been set already.
-            self.pub_date = datetime.date.today()
-    
-    def clean_fields(self, exclude=None):
-        super().clean_fields(exclude = exclude)
-        if self.status == 'draft' and self.pub_date is not None:
-            if exclude and 'status' in exclude:
+        if self.create_at is None:
+            raise ValidationError(_('every person have a created date'))
+
+    def clean_fields(self):
+        if self.username is not None and self.create_at is None:
                 raise ValidationError(
-                    _('Draft entries may not have a publication date.')
+                    _('every person have a created date')
                 )
-            else:
-                raise ValidationError({
-                    'status': _(
-                        'Set status to draft if there is not a '
-                        'publication date.'
-                     ),
-                })
 
 NB: if you detect errors in multiple fields
 raise ValidationError({
-    'title': ValidationError(_('Missing title.'), code='required'),
-    'pub_date': ValidationError(_('Invalid date.'), code='invalid'),
+    'username': ValidationError(_('Missing username'), code='required'),
+    'create_at': ValidationError(_('Invalid date'), code='invalid'),
 })
 ```
-
-
-
-
-03) saving objects
-04) deleting objects
--> Model.clean_fields()     [validate the model fields]
--> Model.clean()            [validate the model as a whole]
--> Model.validate_unique()  [validate the field uniqueness]
