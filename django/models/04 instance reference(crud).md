@@ -111,6 +111,8 @@ raise ValidationError({
 ### other instance methods
 ```python
 # Model.get_FOO_display() [for every field that has choices set]
+# gender = models.CharField(null=True, blank=True, max_length=1, choices=CHOICE_GENDER)
+
 >>> p = Person.objects.get(id=1)
 >>> p.gender
 'M'
