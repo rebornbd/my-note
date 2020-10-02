@@ -10,67 +10,6 @@
 ```python
 from django.db import models
 
-class Blog(models.Model):
-    name = models.CharField(max_length=100)
-    tagline = models.TextField()
-
-    def __str__(self):
-        return self.name
-
-class Author(models.Model):
-    name = models.CharField(max_length=200)
-    email = models.EmailField()
-
-    def __str__(self):
-        return self.name
-
-class Entry(models.Model):
-    blog = models.ForeignKey(Blog, on_delete=models.CASCADE)
-    authors = models.ManyToManyField(Author)
-    
-    headline = models.CharField(max_length=255)
-    body_text = models.TextField()
-    pub_date = models.DateField()
-
-    def __str__(self):
-        return self.headline
-```
-
-### 01) creating objects
-```python
-# option-01 [add a classmethod on the model class]
-from django.db import models
-
-class Book(models.Model):
-    title = models.CharField(max_length=100)
-
-    @classmethod
-    def create(cls, title):
-        book = cls(title=title)
-        # do something with the book
-        return book
-
-# quary
-book = Book.create("Pride and Prejudice")
-
-# option-02 [add a method on a custom manager (usually preferred)]
-class BookManager(models.Manager):
-    def create_book(self, title):
-        book = self.create(title=title)
-        # do something with the book
-        return book
-
-class Book(models.Model):
-    title = models.CharField(max_length=100)
-
-    objects = BookManager()
-
-# query
-book = Book.objects.create_book("Pride and Prejudice")
-```
-
-### 02) saving objects
-```python
 class Person(models.Model):
     CHOICE_GENDER = [('M', 'Male'), ('F', 'Female'), ('O', 'Other')]
 
@@ -78,9 +17,40 @@ class Person(models.Model):
     email       = models.EmailField(null=True, blank=True)
     gender      = models.CharField(null=True, blank=True, max_length=1, choices=CHOICE_GENDER)
     address     = models.TextField(null=True, blank=True)
-    
-# user quary
+```
 
+### 01) creating objects
+```python
+# option-01 [add a classmethod on the model class]
+class Person(models.Model):
+    ...
+    ...
+
+    @classmethod
+    def create(cls, username=None, email=None, gender=None, address=None):
+        person = cls(username=username, email=email, gender=gender, address=address)
+        return person
+# query
+>>> p = Person(username='user', email='user@example.com', gender='M')
+
+# option-02 [add a method on a custom manager (usually preferred)]
+class PersonManager(models.Manager):
+    def create_person(self, username=None, email=None, gender=None, address=None):
+        person = self.create(username=username, email=email, gender=gender, address=address)
+        return person
+
+class Person(models.Model):
+    ...
+    ...
+    
+    objects = PersonManager()
+
+# query
+>>> p = Person.objects.create_person(username='user', email='user@example.com', gender='M')
+```
+
+### 02) saving objects
+```python
 # insert
 >>> p = Person(username='user', email='user@example.com', gender='M')
 >>> p.id        # return None
@@ -103,8 +73,13 @@ class Person(models.Model):
 >>> p.save(update_fields = ['username', 'email'])   # only updates 'username' & 'email'
 ```
 
+### 03) deleting objects
+```python
+>>> p = Person.objects.get(pk=1)
+>>> p.delete()
+```
 
-### validating objects
+### 04) validating objects
 ```python
 import datetime
 from django.core.exceptions import ValidationError
