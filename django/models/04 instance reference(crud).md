@@ -113,6 +113,40 @@ raise ValidationError({
 })
 ```
 
+### saving objects
+```python
+class Person(models.Model):
+    CHOICE_GENDER = [('M', 'Male'), ('F', 'Female'), ('O', 'Other')]
+
+    username    = models.CharField(null=True, blank=True, max_length=200)
+    email       = models.EmailField(null=True, blank=True)
+    gender      = models.CharField(null=True, blank=True, max_length=1, choices=CHOICE_GENDER)
+    address     = models.TextField(null=True, blank=True)
+    
+# user quary
+
+# insert
+>>> p = Person(username='user', email='user@example.com', gender='M')
+>>> p.id        # return None
+>>> p.save()
+>>> p.id        # return id value
+
+# update - 01
+>>> p = Person(id=1, username='user', email='user@example.com', gender='M')
+>>> p.id        # return id value
+>>> p.save()
+
+# update - 02
+>>> p = Person(username='user', email='user@example.com', gender='M')
+>>> p.id        # return None
+>>> p.id = 1
+>>> p.save()
+
+# specifying fields to update
+>>> p = Person(id=1, username='another_user', email='user@yahoo.com', gender='M')
+>>> p.save(update_fields = ['username', 'email'])   # only updates 'username' & 'email'
+```
+
 
 
 03) saving objects
