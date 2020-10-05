@@ -1,3 +1,3 @@
 ### jellyfin api doc
 
-[about page](https://docs.jellyfin.org/general/about.html)
+[jellyfin api link](https://app.swaggerhub.com/apis/vdts/jellyfin-server_api/)
