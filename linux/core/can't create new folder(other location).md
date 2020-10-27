@@ -2,10 +2,13 @@
 ```bash
 sudo mount -o remount,rw '/media/{username}/{Drives Name}'
 
-# example
+# first | optional
 sudo mount -o remount,rw '/media/john/Edu & Soft'
 
-# final
+# step-01:
+sudo ntfsfix /dev/sda3
+
+# step-02:
 umount -l /dev/sda3
 ```
 
