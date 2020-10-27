@@ -1,22 +1,17 @@
 ### Git Basic
 -------------
 
-#### add
-```python
-# specific file
-git add [file name]
+#### basic
+```bash
+git clone https://github.com/rebornbd/demo-repo.git
 
-# all files
+git status
 git add .
-```
+git add *.html
+git add index.html
 
-#### commit
-```python
-git commit -m "[commit message]"
-```
+git commit -m "enter title"
+git commit -m "enter title" -m "description"
 
-#### add & commit
-```
-git commit -am "[commit message]"
-```
 
+```
