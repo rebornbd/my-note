@@ -2,7 +2,7 @@
 -------------
 
 #### basic
-```bash
+```git
 git clone https://github.com/rebornbd/demo-repo.git
 
 git status
