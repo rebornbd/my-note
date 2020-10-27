@@ -13,7 +13,7 @@ git add index.html
 git commit -m "enter title"
 git commit -m "enter title" -m "description"
 
-
+git push origin master
 ```
 
 ### connecting to github with ssh [link](https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/connecting-to-github-with-ssh)
