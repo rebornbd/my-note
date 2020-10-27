@@ -4,5 +4,8 @@ sudo mount -o remount,rw '/media/{username}/{Drives Name}'
 
 # example
 sudo mount -o remount,rw '/media/john/Edu & Soft'
+
+# final
+umount -l /dev/sda3
 ```
 
