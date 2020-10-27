@@ -17,6 +17,7 @@ git commit -m "enter title" -m "description"
 ```
 
 ### connecting to github with ssh
+[link](https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/connecting-to-github-with-ssh)
 ```bash
 # Generating a new SSH key
 ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
