@@ -30,3 +30,4 @@ cd /opt/lampp
 # remove directory
 sudo rm -r /opt/lampp
 ```
+
