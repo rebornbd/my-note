@@ -27,4 +27,15 @@ unset color_prompt force_color_prompt
 source ~/.bashrc
 ```
 
+### bonus (fish shell)
+install fish shell [link](https://fishshell.com/)
+```bash
+sudo apt-add-repository ppa:fish-shell/release-3
+sudo apt-get update
+sudo apt-get install fish
+
+# switch default shell to fish-shell
+fish
+```
+
 ##### @thanks
