@@ -28,7 +28,7 @@ source ~/.bashrc
 ```
 
 ### bonus (fish shell)
-install fish shell [link](https://fishshell.com/)
+install fish shell [website](https://fishshell.com/)
 ```bash
 sudo apt-add-repository ppa:fish-shell/release-3
 sudo apt-get update
