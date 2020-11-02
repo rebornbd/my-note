@@ -138,7 +138,7 @@ class NOT_PROVIDED:
 				number
 			</td>
 			<td>	
-				<input type='number' />
+				< input type='number' />
 			</td>
         </tr>
 		<tr>
