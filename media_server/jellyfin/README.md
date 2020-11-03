@@ -2,7 +2,7 @@
 
 #### 01) create user
 ```python
-curl -X POST "http://127.0.0.1:8096/emby/Users/New?api_key=<enter_apikey>" -H  "accept: application/json" -H  "Content-Type: application/json" -d "{\"Name\":\"new user\"}"
+curl -X POST "http://127.0.0.1:8096/emby/Users/New?api_key=<enter_apikey>" -H  "accept: application/json" -H  "Content-Type: application/json" -d "{\"Name\":\"username\"}"
 ```
 
 #### 02) get all user
