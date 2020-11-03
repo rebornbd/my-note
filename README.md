@@ -3,4 +3,6 @@
 ```bash
 mkdir -p mystudyNode
 cd mystudyNode
+
+git clone https://github.com/rebornbd/my-note.git
 ```
