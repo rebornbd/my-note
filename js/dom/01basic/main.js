@@ -31,3 +31,10 @@ here html:
     <script src="./main.js"></script>
 </body>
 */
+
+
+/*
+NB:
+all nodes    : parentNode, childNodes, firstChild, lastChild, previousSibling, nextSibling
+element nodes: parentElement, children, firstElementChild, lastElementChild, previousElementSibling, nextElementSibling
+*/
