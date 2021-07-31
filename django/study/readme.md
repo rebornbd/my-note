@@ -8,5 +8,6 @@
 04) Response lifecycle
 05) Use of Middleware
 06) Django exceptions
+07) File upload concepts
 ```
 
