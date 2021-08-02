@@ -12,8 +12,40 @@
 ```
 
 ##### Intermediate Tropic Answer:
+```py
+# 01) Django Signals:
+# ===================
+from django.db.models.signals import pre_save
+from django.dispatch import receiver
+from myapp.models import MyModel
+
+@receiver(pre_save, sender=MyModel)
+def presave_handler(sender, instance, raw, using, *args, **kwargs):
+    # sender = the model class
+    # instance = the actual object
+    pass
+
+model signals:
+    pre_init
+    post_init
+    pre_save
+    post_save
+    pre_delete
+    post_delete
+    m2m_changed
+    class_prepared
+
+management signals:
+    pre_migrate
+    post_migrate
+
+request/response signals:
+    request_started
+    request_finished
+    got_request_exception
 ```
-01) Django Signals
+
+```
 02) Caching strategies
 03) User authentication
 04) Response lifecycle
