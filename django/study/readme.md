@@ -34,6 +34,7 @@ def postsave_handler(sender, instance, created, *args, **kwargs):
 
 ##### SIGNALS LIST #####
 # ----------------------
+'''
 model signals:
     pre_init
     post_init
@@ -52,6 +53,7 @@ request/response signals:
     request_started
     request_finished
     got_request_exception
+'''
 ```
 
 ```py
