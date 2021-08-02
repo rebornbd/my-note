@@ -25,6 +25,8 @@ def presave_handler(sender, instance, raw, using, *args, **kwargs):
     # instance = the actual object
     pass
 
+##### SIGNALS LIST #####
+# ----------------------
 model signals:
     pre_init
     post_init
