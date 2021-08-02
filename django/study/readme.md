@@ -11,6 +11,7 @@
 07) Use of Middleware
 08) Django exceptions
 09) File upload concepts
+10) Context Processors
 ```
 
 ##### Intermediate Tropic Answer:
