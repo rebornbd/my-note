@@ -75,16 +75,16 @@ CACHES = {
 
 ##### CACHE LIST #####
 '''
-a> Memcached
-b> Database caching
-    Creating the cache table
-    Multiple databases
-c> Filesystem caching
-d> Local-memory caching
-e> Dummy caching (for development)
-f> Using a custom cache backend
-    redis
-    rabbitmq
+Memcached
+Database caching
+    >> Creating the cache table
+    >> Multiple databases
+Filesystem caching
+Local-memory caching
+Dummy caching (for development)
+Using a custom cache backend
+    >> redis
+    >> rabbitmq
 '''
 ```
 
