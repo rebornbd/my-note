@@ -57,7 +57,7 @@ request/response signals:
 ```py
 # 02) Caching strategies:
 # =======================
-#### Memcached
+#### mem-cache
 CACHES = {
     'default': {
         'BACKEND': 'django.core.cache.backends.memcached.PyMemcacheCache',
