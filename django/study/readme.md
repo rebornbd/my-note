@@ -74,6 +74,7 @@ CACHES = {
 }
 
 ##### CACHE LIST #####
+'''
 a> Memcached
 b> Database caching
     Creating the cache table
@@ -84,6 +85,7 @@ e> Dummy caching (for development)
 f> Using a custom cache backend
     redis
     rabbitmq
+'''
 ```
 
 ```
