@@ -3,12 +3,14 @@
 ##### ** [link](https://www.interviewbit.com/django-interview-questions/#django-intermediate-questions)
 ```
 01) Django Signals
-02) Caching strategies
-03) User authentication
-04) Response lifecycle
-05) Use of Middleware
-06) Django exceptions
-07) File upload concepts
+02) Django cookie
+03) Django session
+04) Caching strategies
+05) User authentication
+06) Response lifecycle
+07) Use of Middleware
+08) Django exceptions
+09) File upload concepts
 ```
 
 ##### Intermediate Tropic Answer:
@@ -54,6 +56,17 @@ request/response signals:
     request_finished
     got_request_exception
 '''
+```
+
+```py
+# 02) Django cookie:
+# ==================
+def my_cookie(request):
+    name = request.COOKIES.get('name')
+    
+    res = render(request, 'myapp/base.html', {})
+    res.set_cookie('name', 'value')
+    return resp
 ```
 
 ```py
