@@ -54,7 +54,7 @@ request/response signals:
     got_request_exception
 ```
 
-```
+```py
 # 02) Caching strategies:
 # =======================
 #### Memcached
