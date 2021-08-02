@@ -64,9 +64,14 @@ request/response signals:
 def my_cookie(request):
     name = request.COOKIES.get('name')
     
+    # json with cookie
+    res = JsonResponse({"foo": "bar"})
+    res.set_cookie(key='key1', value='value1', max_age=3600)
+    
+    # template with cookie
     res = render(request, 'myapp/base.html', {})
     res.set_cookie('name', 'value')
-    return resp
+    return res
 ```
 
 ```py
