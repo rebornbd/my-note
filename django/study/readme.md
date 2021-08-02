@@ -55,7 +55,38 @@ request/response signals:
 ```
 
 ```
-02) Caching strategies
+# 02) Caching strategies:
+# =======================
+#### Memcached
+CACHES = {
+    'default': {
+        'BACKEND': 'django.core.cache.backends.memcached.PyMemcacheCache',
+        'LOCATION': '127.0.0.1:11211',
+    }
+}
+
+#### custom-cache | redis
+CACHES = {
+    'default':{
+        'BACKEND': 'django_redis.cache.RedisCache',
+        'LOCATION': 'redis://127.0.0.1:6379/1'
+    }
+}
+
+##### CACHE LIST #####
+a> Memcached
+b> Database caching
+    Creating the cache table
+    Multiple databases
+c> Filesystem caching
+d> Local-memory caching
+e> Dummy caching (for development)
+f> Using a custom cache backend
+    redis
+    rabbitmq
+```
+
+```
 03) User authentication
 04) Response lifecycle
 05) Use of Middleware
