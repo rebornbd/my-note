@@ -20,9 +20,16 @@ from django.dispatch import receiver
 from myapp.models import MyModel
 
 @receiver(pre_save, sender=MyModel)
-def presave_handler(sender, instance, raw, using, *args, **kwargs):
+def presave_handler(sender, instance, *args, **kwargs):
     # sender = the model class
     # instance = the actual object
+    pass
+
+@receiver(post_save, sender=MyModel)
+def postsave_handler(sender, instance, created, *args, **kwargs):
+    # sender = the model class
+    # instance = the actual object
+    # created = true: a new record was created | false: otherwise
     pass
 
 ##### SIGNALS LIST #####
