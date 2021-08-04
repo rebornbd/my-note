@@ -161,9 +161,6 @@ Layers of Django Application:
     >> Context Processors
     >> Template Renderers
     >> Response Middlewares
-                                                           /<--> model
-    user -> request -> middlewares -> router -> views -> /-----> contextProcessors -> templateRenderers |
-    user <------------ middlewares <- router <- views <----------------------------------- response <--/
 '''
 ```
 ![djangoLifeCycle](https://i.ibb.co/W2fXjsK/1-V5-Rd2-Czu9-TYd-Ew6-P-7-Rt-GA.png)
