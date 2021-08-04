@@ -99,7 +99,7 @@ SESSION_ENGINE = "django.contrib.sessions.backends.cache"
 ```
 
 ```py
-# 02) Caching strategies:
+# 04) Caching strategies:
 # =======================
 #### mem-cache
 CACHES = {
@@ -132,15 +132,109 @@ Using a custom cache backend
 '''
 ```
 
-```
-03) User authentication
-04) Response lifecycle
-05) Use of Middleware
-06) Django exceptions
+```py
+# 05) User authentication:
+# ========================
+from django.contrib.auth import authenticate, login
+
+def user_authView(request):
+    username = request.POST['username']
+    password = request.POST['password']
+    user = authenticate(request, username=username, password=password)
+    if user is not None:
+        login(request, user)
+        # Redirect to a success page.
+    else:
+        # Return an 'invalid login' error message.
+        pass
 ```
 
 ```py
-# 07) File upload concepts:
+# 06) Response lifecycle:
+# =======================
+'''
+Layers of Django Application:
+-----------------------------
+    >> Request Middlewares
+    >> URL Router(URL Dispatcher)
+    >> Views
+    >> Context Processors
+    >> Template Renderers
+    >> Response Middlewares
+                                                           /<--> model
+    user -> request -> middlewares -> router -> views -> /-----> contextProcessors -> templateRenderers |
+    user <------------ middlewares <- router <- views <----------------------------------- response <--/
+'''
+```
+![djangoLifeCycle](https://i.ibb.co/W2fXjsK/1-V5-Rd2-Czu9-TYd-Ew6-P-7-Rt-GA.png)
+
+
+```py
+# 07) Use of Middleware:
+# ======================
+# DEFINITION:
+# -----------
+'''
+In Django, middleware is a lightweight plugin that processes during request and response execution. 
+Middleware is used to perform a function in the application. The functions can be a security, 
+session, csrf protection, authentication etc.
+'''
+
+# BUILT-IN MIDDLEWARE:
+# --------------------
+MIDDLEWARE = [
+    'django.middleware.security.SecurityMiddleware',
+    'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.common.CommonMiddleware',
+    'django.middleware.csrf.CsrfViewMiddleware',
+    'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'django.contrib.messages.middleware.MessageMiddleware',
+    'django.middleware.clickjacking.XFrameOptionsMiddleware',
+]
+
+# CREATING OWN MIDDLEWARE:
+# ------------------------
+class SimpleMiddleware:
+    def __init__(self, get_response):
+        self.get_response = get_response
+        # One-time configuration and initialization.
+
+    def __call__(self, request):
+        # Code to be executed for each request before
+        # the view (and later middleware) are called.
+
+        response = self.get_response(request)
+
+        # Code to be executed for each request/response after
+        # the view is called.
+
+        return response
+```
+
+```py
+# 08) Django exceptions:
+# ======================
+# DEFINITION:
+# -----------
+'''
+An exception is an event, which occurs during the execution of a program, 
+that interrupt/break the normal flow of the program's instructions.
+'''
+
+# some django core exceptions
+'''
+AppRegistryNotReady         ObjectDoesNotExist      EmptyResultSet      FieldDoesNotExist
+MultipleObjectsReturned     SuspiciousOperation     PermissionDenied    ViewDoesNotExist
+ImproperlyConfigured        MiddlewareNotUsed       FieldError          ValidationError
+SynchronousOnlyOperation    BadRequest              RequestAborted
+
+####### url resolver exceptions ##########################################################
+Resolver404                 NoReverseMatch
+'''
+```
+
+```py
+# 09) File upload concepts:
 # =========================
 
 # settings.py:
@@ -200,4 +294,63 @@ def upload(request):
         return render(request, 'core/upload.html', { 'pro_pic_url' : pro_pic_url })
     
     return render(request, 'core/upload.html')
+```
+
+```py
+# 10) Context Processors:
+# =======================
+# INTRODUCTION:
+# -------------
+'''
+A context processor has a simple interface: it’s a Python function that takes one argument,
+an HttpRequest object, and returns a dictionary that gets added to the template context.
+Each context processor must return a dictionary
+'''
+# USED OF CONTEXT PROCESSOR:
+# --------------------------
+'''
+Your project have a header menu with some categories. And you show the categories with all pages.
+
+CASE 01 | context dict:
+    solve by pass every views as context dict.
+
+CASE 02: | context processor:
+    create you own context processor & pass the categories & add it settings.py.
+'''
+
+# CREATE CONTEXT PROCESSOR:
+# -------------------------
+##### assume: appName -> myapp ####################
+# touch myapp/custom_context_processor.py
+# custom_context_processor.py
+
+from .models import Categorie
+def categorie_renderer(request):
+    categories = Categorie.objects.all()
+    res = {}
+    res['categories'] = categories
+    return res
+
+# CONFIGURE TO SETTINGS:
+# ----------------------
+#### settings.py #######
+TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [],
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'context_processors': [
+                'django.template.context_processors.debug',
+                'django.template.context_processors.request',
+                'django.contrib.auth.context_processors.auth',
+                'django.contrib.messages.context_processors.messages',
+                
+                '''
+                'myapp.context_processors.categorie_renderer',
+                '''
+            ],
+        },
+    },
+]
 ```
