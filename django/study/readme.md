@@ -81,21 +81,18 @@ def my_cookie(request):
 '''
 configuring the session engine:
 ------------------------------
-    >> db-backed sessions (default)
-    >> cached sessions
-    >> file-based sessions
-    >> cookie-based sessions
+    >> db-backed sessions (default) | SESSION_ENGINE = 'django.contrib.sessions.backends.db'
+    >> cached sessions              | SESSION_ENGINE = 'django.contrib.sessions.backends.cache' or 'django.contrib.sessions.backends.cache_db'
+    >> file-based sessions          | SESSION_ENGINE = 'django.contrib.sessions.backends.file'
+    >> cookie-based sessions        | SESSION_ENGINE = 'django.contrib.sessions.backends.signed_cookies'
 '''
 # cached sessions:
 # ----------------
 CACHES = {
     'default': {
         'BACKEND': 'redis_cache.RedisCache',
-        'LOCATION': 'hostname:6379',
-        'OPTIONS': {
-            'DB': 1,
-        },
-    },
+        'LOCATION': 'redis://127.0.0.1:6379/1'
+    }
 }
 
 SESSION_ENGINE = "django.contrib.sessions.backends.cache"
