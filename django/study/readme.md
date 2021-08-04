@@ -164,7 +164,8 @@ Layers of Django Application:
 '''
 ```
 <p align="center">
-  <img src="https://i.ibb.co/W2fXjsK/1-V5-Rd2-Czu9-TYd-Ew6-P-7-Rt-GA.png" width="100%" alt="Django Life Cycle"/>
+    <!-- src: https://i.ibb.co/W2fXjsK/1-V5-Rd2-Czu9-TYd-Ew6-P-7-Rt-GA.png -->
+    <img src="https://raw.githubusercontent.com/rebornbd/my-note/master/django/study/img/djangoLifeCycle.png" width="100%" alt="Django Life Cycle"/>
 </p>
 
 ```py
