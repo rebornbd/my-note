@@ -82,7 +82,7 @@ def my_cookie(request):
 configuring the session engine:
 ------------------------------
     >> db-backed sessions (default) | SESSION_ENGINE = 'django.contrib.sessions.backends.db'
-    >> cached sessions              | SESSION_ENGINE = 'django.contrib.sessions.backends.cache' or 'django.contrib.sessions.backends.cache_db'
+    >> cached sessions              | SESSION_ENGINE = 'django.contrib.sessions.backends.cache' or 'django.contrib.sessions.backends.cached_db'
     >> file-based sessions          | SESSION_ENGINE = 'django.contrib.sessions.backends.file'
     >> cookie-based sessions        | SESSION_ENGINE = 'django.contrib.sessions.backends.signed_cookies'
 '''
