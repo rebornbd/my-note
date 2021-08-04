@@ -76,6 +76,32 @@ def my_cookie(request):
 ```
 
 ```py
+# 03) Django session:
+# ===================
+'''
+configuring the session engine:
+------------------------------
+    >> db-backed sessions (default)
+    >> cached sessions
+    >> file-based sessions
+    >> cookie-based sessions
+'''
+# cached sessions:
+# ----------------
+CACHES = {
+    'default': {
+        'BACKEND': 'redis_cache.RedisCache',
+        'LOCATION': 'hostname:6379',
+        'OPTIONS': {
+            'DB': 1,
+        },
+    },
+}
+
+SESSION_ENGINE = "django.contrib.sessions.backends.cache"
+```
+
+```py
 # 02) Caching strategies:
 # =======================
 #### mem-cache
