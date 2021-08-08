@@ -37,14 +37,14 @@ class Profile(models.Model):
 class Post(models.Model):
     title = models.CharField(max_length=200, null=True, blank=True)
     desc  = models.TextField(null=True, blank=True)
-    user  = models.ForeignKey(User, related_name='post', on_delete=models.CASCADE, unique=True)
+    user  = models.ForeignKey(User, related_name='posts', on_delete=models.CASCADE, unique=True)
 
 ########## console ###########
 # python manage.py shell
 ###### ForeignKey ######
 users = User.objects.all()
 user = users[0]
-user.post.all()         # return <QuerySet [<Post: post-01>]>
+user.posts.all()        # return <QuerySet [<Post: post-01>]>
 # NB: IF A USER HAVE POST, THEN IT'S ALWAYS RETURN A QuerySet WITH A SINGLE POST
 
 ###### OneToOne ######
