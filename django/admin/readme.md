@@ -76,5 +76,5 @@ form .aligned div.help a {
 ```
 
 #### admin panel
-![admin-panel](https://github.com/rebornbd/my-note/raw/master/django/admin%20customization/images/django-admin-panel.png?raw=true)
+![admin-panel](https://raw.githubusercontent.com/rebornbd/my-note/master/django/admin/images/django-admin-panel.png)
 
