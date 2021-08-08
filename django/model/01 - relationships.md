@@ -47,7 +47,7 @@ class Profile(models.Model):
 >> user = profile.user
 ```
 
-#### 01) ManyToOne | ForeignKey
+#### 02) ManyToOne | ForeignKey
 ```py
 # User(1) ----- (M)Post
 
@@ -92,4 +92,65 @@ class Post(models.Model):
 >> post = posts[0] | posts.first()
 >> # 1'ST POST USER
 >> user = post.user
+```
+
+#### 03) ManyToMany
+```py
+# Author(M) ----- (M)Book
+
+##### model #####
+class Author(models.Model):
+    name = models.CharField(max_length=200)
+    address  = models.TextField(null=True, blank=True)
+    
+    def __str__(self):
+        return f"{self.name}"
+
+class Book(models.Model):
+    title   = models.CharField(max_length=200, null=True, blank=True)
+    desc    = models.TextField(null=True, blank=True)
+    authors = models.ManyToManyField(Author, related_name='books')
+    
+    def __str__(self):
+        return f"{self.title}"
+
+########## console ###########
+# python manage.py shell
+>> from myapp.models import Author, Book
+>>
+>> # CREATE OBJECT
+>> # +++++++++++++++++++++++++++++++++++++++++
+>> a1 = Author(name="jio")
+>> a2 = Author(name="ziko")
+>> a1.save()
+>> a2.save()
+>> 
+>> b1 = Book(title="Advanced C++", desc="Great Book!")
+>> b1.save()                # SEE (NB)
+>> b1.authors.add(a1)       # AFTER ADD
+>> b1.authors.add(a2)       # AFTER ADD
+>> b1.authors.remove(a2)
+>> # NB: FIRST CREATE OBJECT WITHOUT M2M OBJECT, AFTER ADD M2M OBJECT'S
+
+>> # ADD | REMOVE MULTIPLE AT SINGLE-TIME
+>> b1.authors.add(a1, a2, a3, a4)
+>> b1.authors.remove(a3, a4)
+>> # DELETE FULL ENTRY
+>> b1.authors.delete()
+>> b1.authors.all()         # return <QuerySet []>
+>> 
+>> b2 = Book(title="Advanced Python", desc="Great Book!")
+>> b2.save()
+>> b2.authors.add(a1, a3)
+>> # +++++++++++++++++++++++++++++++++++++++++
+>>
+>> authors = Author.objects.all()
+>> author = authors[0]
+>> # 1'ST AUTHOR ALL BOOK
+>> books = author.books.all()
+>>
+>> books = Book.objects.all()
+>> book = books[0]
+>> # 1'ST BOOK ALL AUTHOR
+>> authors = book.authors.all()
 ```
