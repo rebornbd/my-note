@@ -27,24 +27,24 @@ class Profile(models.Model):
 
 ########## console ###########
 # python manage.py shell
->> from myapp.models import User, Profile
->>
->> # CREATE OBJECT
->> # ++++++++++++++
->> u1 = User(username="rahim")
->> u1.save()
->> 
->> p1 = Profile(profile_img="profiles/i-12hu6_uid98-10.png", user=u1)
->> p1.save()
->> # ++++++++++++++
->>
->> users = User.objects.all()
->> user = users[0]
->> profile = user.profile
->>
->> profiles = Profile.objects.all()
->> profile = profiles[0] | profiles.first()
->> user = profile.user
+from myapp.models import User, Profile
+
+# CREATE OBJECT
+# ++++++++++++++
+u1 = User(username="rahim")
+u1.save()
+
+p1 = Profile(profile_img="profiles/i-12hu6_uid98-10.png", user=u1)
+p1.save()
+# ++++++++++++++
+
+users = User.objects.all()
+user = users[0]
+profile = user.profile
+
+profiles = Profile.objects.all()
+profile = profiles[0] | profiles.first()
+user = profile.user
 ```
 
 #### 02) ManyToOne | ForeignKey
@@ -70,28 +70,28 @@ class Post(models.Model):
 
 ########## console ###########
 # python manage.py shell
->> from myapp.models import User, Post
->>
->> # CREATE OBJECT
->> # ++++++++++++++
->> u1 = User(username="korim")
->> u1.save()
->> 
->> p1 = Post(title="Django Model",    desc="....", user=u1)
->> p2 = Post(title="Django Queryset", desc="....", user=u1)
->> p1.save()
->> p2.save()
->> # ++++++++++++++
->>
->> users = User.objects.all()
->> user = users[0]
->> # 1'ST USER ALL POST
->> posts = user.posts.all()
->>
->> posts = Post.objects.all()
->> post = posts[0] | posts.first()
->> # 1'ST POST USER
->> user = post.user
+from myapp.models import User, Post
+
+# CREATE OBJECT
+# ++++++++++++++
+u1 = User(username="korim")
+u1.save()
+
+p1 = Post(title="Django Model",    desc="....", user=u1)
+p2 = Post(title="Django Queryset", desc="....", user=u1)
+p1.save()
+p2.save()
+# ++++++++++++++
+
+users = User.objects.all()
+user = users[0]
+# 1'ST USER ALL POST
+posts = user.posts.all()
+
+posts = Post.objects.all()
+post = posts[0] | posts.first()
+# 1'ST POST USER
+user = post.user
 ```
 
 #### 03) ManyToMany
@@ -116,41 +116,41 @@ class Book(models.Model):
 
 ########## console ###########
 # python manage.py shell
->> from myapp.models import Author, Book
->>
->> # CREATE OBJECT
->> # +++++++++++++++++++++++++++++++++++++++++
->> a1 = Author(name="jio")
->> a2 = Author(name="ziko")
->> a1.save()
->> a2.save()
->> 
->> b1 = Book(title="Advanced C++", desc="Great Book!")
->> b1.save()                # SEE (NB)
->> b1.authors.add(a1)       # AFTER ADD
->> b1.authors.add(a2)       # AFTER ADD
->> b1.authors.remove(a2)
->> # NB: FIRST CREATE OBJECT WITHOUT M2M OBJECT, AFTER ADD M2M OBJECT'S
+from myapp.models import Author, Book
 
->> # ADD | REMOVE MULTIPLE AT SINGLE-TIME
->> b1.authors.add(a1, a2, a3, a4)
->> b1.authors.remove(a3, a4)
->> # DELETE FULL ENTRY
->> b1.authors.delete()
->> b1.authors.all()         # return <QuerySet []>
->> 
->> b2 = Book(title="Advanced Python", desc="Great Book!")
->> b2.save()
->> b2.authors.add(a1, a3)
->> # +++++++++++++++++++++++++++++++++++++++++
->>
->> authors = Author.objects.all()
->> author = authors[0]
->> # 1'ST AUTHOR ALL BOOK
->> books = author.books.all()
->>
->> books = Book.objects.all()
->> book = books[0]
->> # 1'ST BOOK ALL AUTHOR
->> authors = book.authors.all()
+# CREATE OBJECT
+# +++++++++++++++++++++++++++++++++++++++++
+a1 = Author(name="jio")
+a2 = Author(name="ziko")
+a1.save()
+a2.save()
+
+b1 = Book(title="Advanced C++", desc="Great Book!")
+b1.save()                # SEE (NB)
+b1.authors.add(a1)       # AFTER ADD
+b1.authors.add(a2)       # AFTER ADD
+b1.authors.remove(a2)
+# NB: FIRST CREATE OBJECT WITHOUT M2M OBJECT, AFTER ADD M2M OBJECT'S
+
+# ADD | REMOVE MULTIPLE AT SINGLE-TIME
+b1.authors.add(a1, a2, a3, a4)
+b1.authors.remove(a3, a4)
+# DELETE FULL ENTRY
+b1.authors.delete()
+b1.authors.all()         # return <QuerySet []>
+
+b2 = Book(title="Advanced Python", desc="Great Book!")
+b2.save()
+b2.authors.add(a1, a3)
+# +++++++++++++++++++++++++++++++++++++++++
+
+authors = Author.objects.all()
+author = authors[0]
+# 1'ST AUTHOR ALL BOOK
+books = author.books.all()
+
+books = Book.objects.all()
+book = books[0]
+# 1'ST BOOK ALL AUTHOR
+authors = book.authors.all()
 ```
