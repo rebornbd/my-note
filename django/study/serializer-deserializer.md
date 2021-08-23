@@ -86,7 +86,7 @@ class BookSerializers(serializers.ModelSerializer):
         return instance
 ```
 
-#### views.py | 
+#### views.py | book.views
 ```py
 from django.shortcuts import get_object_or_404
 from django.contrib.auth.models import User
