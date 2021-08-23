@@ -135,8 +135,12 @@ b1.authors.remove(a2)
 # ADD | REMOVE MULTIPLE AT SINGLE-TIME
 b1.authors.add(a1, a2, a3, a4)
 b1.authors.remove(a3, a4)
-# DELETE FULL ENTRY
-b1.authors.delete()
+# CLEAR FULL ENTRY
+b1.authors.clear()
+# b1.authors.clear() IS EQUAL TO THE BELOW 2 LINES
+# for auth in b1.authors.all():
+#   b1.authors.remove(auth)
+
 b1.authors.all()         # return <QuerySet []>
 
 b2 = Book(title="Advanced Python", desc="Great Book!")
