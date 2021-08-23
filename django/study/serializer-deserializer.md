@@ -39,7 +39,7 @@ from api.serializers import UserSerializer
 from .models import Book
 
 
-class BookSerializers(serializers.ModelSerializer):
+class BookSerializer(serializers.ModelSerializer):
     authors = UserSerializer(many=True, read_only=True)
     class Meta:
         model = Book
@@ -72,9 +72,11 @@ class BookSerializers(serializers.ModelSerializer):
         if isinstance(authors, list):
             if len(authors) > 0:
                 # delete previous auth
-                preAuths = instance.authors.all()
-                for auth in preAuths:
-                    instance.authors.remove(auth)
+                instance.authors.clear()
+                
+                # preAuths = instance.authors.all()
+                # for auth in preAuths:
+                #     instance.authors.remove(auth)
                 
                 # set new auth
                 for authID in authors:
@@ -93,8 +95,7 @@ from django.contrib.auth.models import User
 from rest_framework.response import Response
 from django.http import JsonResponse
 import json
-
-from ..serializers import BookSerializers
+from ..serializers import BookSerializer
 from ..models import Book
 
 
@@ -105,14 +106,14 @@ def fbvBookLC(request):
     # list
     if request.method == "GET":
         books = Book.objects.all()
-        serializer = BookSerializers(instance=books, many=True)
+        serializer = BookSerializer(instance=books, many=True)
         return JsonResponse(serializer.data, safe=False)
 
     
     # create
     elif request.method == "POST":
         book = json.loads(request.body)
-        serializer = BookSerializers(data=book)
+        serializer = BookSerializer(data=book)
         if serializer.is_valid():
             serializer.save()
             return JsonResponse(serializer.data, safe=False)
@@ -130,7 +131,7 @@ def fbvBookRUD(request, id):
         queryset = Book.objects.all()
         try:
             book = get_object_or_404(queryset, pk=id)
-            serializer = BookSerializers(instance=book)
+            serializer = BookSerializer(instance=book)
             return JsonResponse(serializer.data, safe=False)
         except Exception as err:
             data['errors'] = str(err)
@@ -143,7 +144,7 @@ def fbvBookRUD(request, id):
         queryset = Book.objects.all()
         try:
             book = get_object_or_404(queryset, pk=id)
-            serializer = BookSerializers(instance=book, data=book_data, partial=True)
+            serializer = BookSerializer(instance=book, data=book_data, partial=True)
             if serializer.is_valid():
                 serializer.save()
                 return JsonResponse(serializer.data, safe=False)
