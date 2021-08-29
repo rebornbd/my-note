@@ -1,7 +1,7 @@
 ### Introspected tunnels to localhost
 
 #### ngrok download [link](https://ngrok.com/download)
-#### setup [link] (https://geekflare.com/expose-django-app-with-ngrok/)
+#### setup [link](https://geekflare.com/expose-django-app-with-ngrok/)
 ```
 # 01) download the file
 # 02) unzip the file
