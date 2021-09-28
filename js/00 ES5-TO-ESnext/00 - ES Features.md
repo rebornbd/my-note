@@ -3,6 +3,7 @@
     "use strict"
     String[number] access
     Multiline strings
+    String.split()
     String.trim()
     Array.isArray()
     Array.forEach()
