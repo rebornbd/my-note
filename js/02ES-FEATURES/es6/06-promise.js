@@ -1,5 +1,7 @@
 /*
     // ES6
+    Promise.resolve
+    Promise.reject
     Promise.all
     Promise.race
 */
