@@ -9,6 +9,12 @@
     Array.some()
     Array.indexOf()
     Array.lastIndexOf()
+
+    //ES6
+    Array.from()
+    Array.keys()
+    Array.find()
+    Array.findIndex()
 */
 
 var arr1 = [1, 2, 3, 4, 5];
@@ -28,7 +34,7 @@ arr2.forEach((value, index, arr) => {
 
 // Array.map()
 var res = arr2.map((value, index, arr) => `<li>${value}</li>`);
-console.log(res);
+// console.log(res);
 
 // Array.filter()
 var res = arr1.filter((value, index, arr) => value%2 != 0);
@@ -69,3 +75,37 @@ var index = arr1.indexOf(4);
 // Array.lastIndexOf()
 var lastIndex = arr1.lastIndexOf(4);
 // console.log(lastIndex);
+
+
+// ES6
+/*
+    Array.from()
+    Array.keys()
+    Array.find()
+    Array.findIndex()
+*/
+
+// Array.from()
+var user = {
+    magicNum: 3,
+    score: function(value) { return value*this.magicNum; }
+}
+var bindScore = user.score.bind(user);
+var res = Array.from("ABC");                          // ['A', 'B', 'C']
+var res = Array.from([10, 20, 30], bindScore);        // [30, 60, 90]
+var res = Array.from([10, 20, 30], user.score, user); // [30, 60, 90]
+var res = Array.from([10, 20, 30], x => x*3);         // [30, 60, 90]
+
+
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+
+// Array.keys()
+var keys = fruits.keys();   // for (var k of keys) console.log(k);
+
+// Array.find()
+var res = fruits.find((item, index, arr) => item === "Apple");
+// console.log(res);
+
+// Array.findIndex()
+var resIndex = fruits.findIndex((item, index, arr) => item === "Apple");
+// console.log(resIndex);
