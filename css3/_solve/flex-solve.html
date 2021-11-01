@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FLEXBOX CSS</title>
+    <style>
+      .container {
+        display: flex;
+        gap: 10px;
+
+        flex-direction: row-reverse;
+        flex-wrap: wrap;
+        /* flex-flow: row-reverse wrap; */
+
+        justify-content: center;
+        height: 250px;
+
+        align-items: center;
+        align-content: center;
+      }
+      .container > div {
+        /* margin-top: 10px; */
+        background-color: darkgray;
+        padding: 50px;
+        border-radius: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <h5>FLEXBOX</h5>
+    <div class="container">
+      <div>A</div>
+      <div>B</div>
+      <div>C</div>
+      <div>D</div>
+      <div>E</div>
+      <div>F</div>
+      <div>G</div>
+      <div>H</div>
+      <div>I</div>
+      <div>J</div>
+    </div>
+  </body>
+</html>

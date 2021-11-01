@@ -1,0 +1,76 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IMAGE GRID</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
+    />
+    <style>
+      html,
+      body {
+        background-color: khaki;
+        margin: 10;
+      }
+      .container > div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: lightcoral;
+      }
+      .container > div > img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      /* main css */
+      .container {
+        /* height: 100%; */
+
+        display: grid;
+        grid-gap: 5px;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        
+        grid-auto-rows: 100px;
+        grid-auto-flow: dense;
+      }
+
+      .horizontal {
+        grid-column: auto / span 2;
+      }
+      .vertical {
+        grid-row: span 2;
+      }
+      .big {
+        grid-column: span 2;
+        grid-row: span 2;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div><img src="img/normal1.jpg" /></div>
+      <div class="vertical"><img src="img/vertical1.jpg" /></div>
+      <div class="horizontal"><img src="img/horizontal1.jpg" /></div>
+      <div><img src="img/normal2.jpg" /></div>
+      <div><img src="img/normal3.jpg" /></div>
+      <div class="big"><img src="img/big1.jpg" /></div>
+      <div><img src="img/normal4.jpg" /></div>
+      <div class="vertical"><img src="img/vertical2.jpg" /></div>
+      <div><img src="img/normal5.jpg" /></div>
+      <div class="horizontal"><img src="img/horizontal2.jpg" /></div>
+      <div><img src="img/normal6.jpg" /></div>
+      <div class="big"><img src="img/big2.jpg" /></div>
+      <div><img src="img/normal7.jpg" /></div>
+      <div class="horizontal"><img src="img/horizontal3.jpg" /></div>
+      <div><img src="img/normal8.jpg" /></div>
+      <div class="big"><img src="img/big3.jpg" /></div>
+      <div><img src="img/normal9.jpg" /></div>
+      <div class="vertical"><img src="img/vertical3.jpg" /></div>
+    </div>
+  </body>
+</html>

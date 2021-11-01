@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS POSITION</title>
+
+    <style>
+      .container {
+        padding: 50px;
+      }
+      .cart {
+        width: 100%;
+      }
+
+      .cart-image {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        border-radius: 4px;
+      }
+
+      .cart-save {
+        border-radius: 4px;
+        background-color: chocolate;
+        color: white;
+        padding: 10px 20px;
+        text-align: right;
+        
+        position: relative;
+        top: calc(0px - 300px - 0px);
+        right: calc(120px - 100%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="cart">
+        <img
+          src="https://cdnuploads.aa.com.tr/uploads/Contents/2021/01/11/thumbs_b_c_f45d7d84450b0c7751001125ddf3264a.jpg?v=171506"
+          alt="snowflow"
+          class="cart-image"
+        />
+
+        <span class="cart-save">Save R15.00</span>
+      </div>
+
+
+      <div class="cart">
+        <img
+          src="https://cdnuploads.aa.com.tr/uploads/Contents/2021/01/11/thumbs_b_c_f45d7d84450b0c7751001125ddf3264a.jpg?v=171506"
+          alt="snowflow"
+          class="cart-image"
+        />
+
+        <span class="cart-save">Save R25.00</span>
+      </div>
+    </div>
+  </body>
+</html>

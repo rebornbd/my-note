@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GRID DEMO</title>
+
+    <style>
+      html,
+      body {
+        box-sizing: border-box;
+        background-color: #ffeead;
+        height: 100%;
+        padding: 10px;
+        margin: 0px;
+      }
+
+      .container > div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2em;
+        color: #ffeead;
+      }
+
+      .container > div:nth-child(1n) {
+        background-color: #96ceb4;
+      }
+
+      .container > div:nth-child(3n) {
+        background-color: #88d8b0;
+      }
+
+      .container > div:nth-child(2n) {
+        background-color: #ff6f69;
+      }
+
+      .container > div:nth-child(4n) {
+        background-color: #ffcc5c;
+      }
+
+      /* Main */
+      .container {
+        height: 100%;
+        display: grid;
+        grid-gap: 3px;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: 40px auto 40px;
+      }
+
+      .header {
+        grid-column: 1 / -1;
+      }
+
+      .menu {
+      }
+
+      .content {
+        grid-column: 2 / -1;
+      }
+
+      .footer {
+        grid-column: 1 / -1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">HEADER</div>
+      <div class="menu">MENU</div>
+      <div class="content">CONTENT</div>
+      <div class="footer">FOOTER</div>
+    </div>
+  </body>
+</html>

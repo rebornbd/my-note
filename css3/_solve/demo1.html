@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GRID</title>
+
+  <style>
+    .container {
+      width: 500px;
+      margin: 100px auto;
+    }
+    .cart {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      grid-template-rows: 8fr 4fr;
+    }
+    .cartLeft {
+      grid-column: 1 / 8;
+      background-color: blueviolet;
+    }
+    .cartLeft > div {
+      /* display: flex;
+      flex-direction: column; */
+      background-color: brown;
+      margin-bottom: 100px;
+    }
+    .cartRight {
+      grid-column: 8 / -1;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="cart">
+      <div class="cartLeft">
+        <div>Title</div>
+        <div>Disc</div>
+        <div>Price: 5.00</div>
+      </div>
+      <div class="cartRight">
+        <img src="../flexbox/img/big1.jpg" />
+      </div>
+    </div>
+  </div>
+</body>
+</html>

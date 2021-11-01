@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GRID - template areas</title>
+
+  <style>
+    html, body {
+      box-sizing: border-box;
+      background-color: khaki;
+      height: 100%;
+      padding: 5px;
+      margin: 0;
+    }
+    .container > div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: lightcoral;
+    }
+
+
+    /* main css */
+    .container {
+      height: 100%;
+
+      display: grid;
+      grid-gap: 5px;
+      grid-template-columns: repeat(12, 1fr);
+      grid-template-rows: 1fr 5fr 1fr;
+
+      grid-template-areas:  "M H H H H H H H H H H H"
+                            "M C C C C C C C C C C C"
+                            "F F F F F F F F F F F .";
+    }
+    .header {
+      grid-area: H;
+    }
+    .menu {
+      grid-area: M;
+    }
+    .content {
+      grid-area: C;
+    }
+    .footer {
+      grid-area: F;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">HEADER</div>
+    <div class="menu">MENU</div>
+    <div class="content">CONTENT</div>
+    <div class="footer">FOOTER</div>
+  </div>
+</body>
+</html>

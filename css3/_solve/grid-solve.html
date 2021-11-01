@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FLEXBOX CSS</title>
+    <style>
+      .container {
+        display: grid;
+        grid-gap: 10px;
+        width: 400px;
+        margin: 100px auto;
+        grid-template-columns: auto auto;
+        justify-content: center;
+      }
+      .item {
+        width: 100px;
+        height: 100px;
+        background-color: darkgray;
+        border-radius: 50%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h5>GRID</h5>
+    <div class="container">
+      <div class="item">SHOP</div>
+      <div class="item">FASHING</div>
+      <div class="item">SHOP</div>
+      <div class="item">FASHING</div>
+      <div class="item">E</div>
+      <div class="item">F</div>
+      <div class="item">G</div>
+      <div class="item">H</div>
+      <div class="item">I</div>
+      <div class="item">J</div>
+    </div>
+  </body>
+</html>

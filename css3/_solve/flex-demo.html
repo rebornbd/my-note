@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FLEXBOX CSS</title>
+    <style>
+      .container1 {
+        display: flex;
+        gap: 10px;
+        width: 400px;
+        margin: 100px auto;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .item1 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 150px;
+        height: 150px;
+        background: lightsteelblue;
+        border-radius: 50%;
+      }
+
+      @media only screen and (min-width: 992px) {
+        .container1 {
+          width: 650px;
+          gap: 20px;
+        }
+        .item1 {
+          width: 200px;
+          height: 200px;
+        }
+      }
+
+      .container2 {
+        display: grid;
+        gap: 10px;
+        width: 400px;
+        grid-template-columns: auto auto;
+        margin: 100px auto;
+        justify-content: center;
+      }
+      .item2 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 150px;
+        height: 150px;
+        background: lightslategray;
+        border-radius: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container1">
+      <div class="item1">SHOPING</div>
+      <div class="item1">FOOD</div>
+      <div class="item1">Fashion</div>
+      <div class="item1">Learning</div>
+      <div class="item1">Travel</div>
+      <div class="item1">Rewards</div>
+    </div>
+
+    <div class="container2">
+      <div class="item2">Icon</div>
+      <div class="item2">Icon</div>
+      <div class="item2">Icon</div>
+      <div class="item2">Icon</div>
+      <div class="item2">Icon</div>
+      <div class="item2">Icon</div>
+      <div class="item2">Icon</div>
+      <div class="item2">Icon</div>
+    </div>
+  </body>
+</html>
