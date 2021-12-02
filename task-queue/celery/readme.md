@@ -84,5 +84,5 @@ celery -A projectName worker --pool=eventlet -l INFO
 # process explorer:
 celery
 
-NB: eventlet, we don't mension concurrency & autoscale.
+NB: eventlet, we don't need mension concurrency & autoscale.
 ```
