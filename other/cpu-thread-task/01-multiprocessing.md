@@ -42,12 +42,15 @@ when we need heavy calculation then we can use multi-processing concept.
 
 #### multi-processing with multi-threading
 ```
-                                   (task-3)                       (sub-task-3 on task-2)
-                      -----------> processor-1    --------------> thread-1
-                     /                           /
-    [tasks]         /              (task-2)     /                 (sub-task-2 on task-2)
- (multi processor)  -------------> processor-2  ----------------> thread-2
-                    \                           \
-                     \             (task-1)      \                (sub-task-1 on task-2)
-                      -----------> processor-3    --------------> thread-3
+                                   (task-3)
+                      -----------> processor-1
+                     /
+    [tasks]         /              (task-2)                       (sub-task-3 on task-1)
+ (multi processor)  -------------> processor-2    --------------> thread-1
+                    \                            /
+                     \             (task-1)     /                 (sub-task-2 on task-1)
+                      -----------> processor-3  ----------------> thread-2
+                                                \
+                                                 \                (sub-task-1 on task-1)
+                                                  --------------> thread-3
 ```
