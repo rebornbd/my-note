@@ -2,7 +2,9 @@
 
 #### intro
 ```
-A single processor can executed task by dividing the task of many sub-tasks & sub-tasks are perform by threads then the system is called multi-threading.
+A single processor can executed task by dividing
+the task of many sub-tasks & sub-tasks are perform
+by threads then the system is called multi-threading.
 ```
 
 #### when we used multi-threading?
