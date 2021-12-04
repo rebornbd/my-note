@@ -20,9 +20,14 @@ linux
 package-manager
   - nvm
   - pyenv
+process-thread
+  - python
+task-queue
+  - celery
 working
   - crawler
 other
+  - cpu-thread-task
   - english
   - media-server
   - session-cookie
