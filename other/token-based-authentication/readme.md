@@ -74,3 +74,17 @@ const refreshAccessToken = async () => {
   return accessToken;
 }
 ```
+
+#### api call | from any react compnents
+```js
+  useEffect(() => {
+    axios.get('http://127.0.0.1:8000/api/categories/10/')
+      .then(res => res?.data)
+      .then(res => {
+        console.log(res);
+      })
+      .catch(err => {
+        console.log(err);
+      })
+  }, [])
+```
