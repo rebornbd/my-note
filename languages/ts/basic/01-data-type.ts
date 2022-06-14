@@ -14,3 +14,20 @@
       *) classes
      **) etc.
 */
+
+// variable data types
+const person1 = 'Rahim';
+const person2: string = person1;
+const persons1: string[] = [person1, person2];
+const persons2: Array<string> = [person1, person2];
+
+// function signatures
+let add: (num1: number, num2: number) => number;
+
+// function body
+add = (num1, num2) => {
+  return num1 + num2;
+}
+
+// function call
+add(10, 10);
