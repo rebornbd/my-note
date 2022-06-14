@@ -14,6 +14,8 @@ frontend
 git-github
   - git
   - github
+languages
+  - js
 linux
   - core
   - xampp
@@ -24,6 +26,8 @@ process-thread
   - python
 task-queue
   - celery
+testing
+  - jest-crash-course
 working
   - crawler
 other
