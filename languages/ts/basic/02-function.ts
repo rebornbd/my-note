@@ -22,6 +22,8 @@ calculate = (num1, num2, num3 = 0) => {
   return num1 + num2 + num3;
 }
 
+
+// function signatures & body
 const calculation = (num1: number, num2: number, num3: number = 0): number => {
   return num1 + num2 + num3;
 }
