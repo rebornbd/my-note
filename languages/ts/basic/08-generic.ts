@@ -6,8 +6,10 @@
   (2) Generic Constraints
 */
 
+
+////////////////////
 // (1) TypeScript Generics
-// =================================== START ============================================
+////////////////////
 const getRandomElement = <T>(items: T[]): T => {
   const randomIndex = Math.floor(Math.random() * items.length);
   return items[randomIndex];
@@ -20,9 +22,9 @@ const item1 = getRandomElement(numbers);
 const item2 = getRandomElement(colors);
 
 
-
+////////////////////
 // (2) Generic Constraints
-// =================================== START ============================================
+////////////////////
 const getId = () => Math.floor(Math.random() * 100);
 
 // option: 01
