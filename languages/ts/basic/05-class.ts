@@ -21,7 +21,9 @@
 */
 
 
+////////////////////
 // constructor
+////////////////////
 class Person1 {
   name: string;
   age: number;
@@ -34,16 +36,18 @@ class Person1 {
 const p1 = new Person1("rahim", 27);
 
 
-
+////////////////////
 // constructor with short way by adding access modifier
+////////////////////
 class Person2 {
   constructor(public name: string, private age: number) {}
 }
 const p2 = new Person2("rahim", 27);
 
 
-
+////////////////////
 // readonly
+////////////////////
 class Person3 {
   public name: string;
   private readonly age: number;
@@ -60,8 +64,9 @@ class Person3 {
 const p3 = new Person3("rahim", 27);
 
 
-
+////////////////////
 // inheritance
+////////////////////
 class Person {
   constructor(public name: string, private age: number) {}
 
@@ -91,8 +96,9 @@ const emp = new Employee("rahim", 27, "Software Engineer");
 emp.setJobTitle("DevOps Engineer");
 
 
-
+////////////////////
 // Method overriding
+////////////////////
 class Animal {
   constructor(public name: string) {}
 
@@ -113,8 +119,9 @@ class Dog extends Animal {
 const dog: Dog = new Dog("Poppy");
 
 
-
+////////////////////
 // static properties and methods
+////////////////////
 class Person4 {
   private static hasText: string = "This is person class";
   public name: string;
@@ -137,8 +144,9 @@ const p4 = new Person4("rahim", 27);
 const hasText = Person4.getHasText();
 
 
-
+////////////////////
 // Abstract Classes
+////////////////////
 abstract class Person5 {
   constructor(public name: string, public age: number) {}
 
@@ -158,8 +166,9 @@ const emp5 = new Employee5("rahim", 27, "Software Engineer");
 const emp5Details = emp5.details();
 
 
-
+////////////////////
 // Class Interface
+////////////////////
 interface Person6 {
   name: string;
   age: number;
