@@ -6,7 +6,9 @@
 */
 
 
+////////////////////
 // (1) Intersection Types
+////////////////////
 interface A {
   name: string;
   age: number;
@@ -27,15 +29,17 @@ type _AB = A | B; // name          | common props
 type AC  = A & B; // name, age, email, phone
 
 
-
+////////////////////
 // (2) Type Casting | type cast keyword: as, <> 
+////////////////////
 // const body1 = document.body as HTMLBodyElement;                   // as
 // const body2 = <HTMLBodyElement> document.body;                    // <>
 // const body3 = <HTMLBodyElement> document.body as HTMLBodyElement; // combine
 
 
-
+////////////////////
 // (3) Type Assertions
+////////////////////
 const getNetPrice = (price: number, discount: number, format: boolean = false): (number | string) => {
   const _price = price * (1 - discount);
   return (format)
