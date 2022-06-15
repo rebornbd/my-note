@@ -1,4 +1,6 @@
-// interface
+////////////////////
+// Interface
+////////////////////
 interface Person {
   fName:  string;
   mName?: string;
@@ -6,7 +8,9 @@ interface Person {
 }
 
 
-// uses of a function
+////////////////////
+// Interface uses of a function
+////////////////////
 const personDetails1 = (person: Person) => {
   console.log(`fName: ${person.fName}`);
   console.log(`mName: ${person.mName}`);
@@ -20,8 +24,9 @@ const personDetails2 = ({ fName, mName, lName }: Person) => {
 }
 
 
-
-// create a object
+////////////////////
+// Interface uses to initialize of a object
+////////////////////
 const personObj1: Person = {
   fName: 'Rahim',
   lName: 'Khan'
@@ -34,15 +39,17 @@ const personObj2: Person = {
 };
 
 
-
-// uses of a class
+////////////////////
+// Interface uses of a class
+////////////////////
 class Employee implements Person {
   constructor(public fName: string, public lName: string, public mName?: string) {}
 }
 
 
-
-// interface inheritance
+////////////////////
+// Interface inheritance
+////////////////////
 interface A {
   aProps1: string;
   aMethod1(): void;
