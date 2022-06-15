@@ -14,7 +14,10 @@
     (11) Dynamic Type
   */
 
+
+////////////////////
 // (07) Tuple Type
+////////////////////
 type color = [number, number, number];
 let rgb: color;
 const colors: color[] = [];
@@ -25,7 +28,9 @@ const c3 = rgb = [30, 20, 66];
 colors.push(c1, c2, c3);
 
 
+////////////////////
 // (08) Enum Type
+////////////////////
 enum COLOR {
   RED,
   GREEN,
@@ -54,20 +59,26 @@ const getRGB = (color: COLOR) => {
 console.log(getRGB(COLOR.GREEN));
 
 
+////////////////////
 // (09) Never Type
+////////////////////
 const raiseError = (message: string): never => {
   throw new Error(message);
 }
 
 
+////////////////////
 // (10) Union Type
+////////////////////
 let mixed: (string | number | boolean)[] = [];
 mixed.push(10);
 mixed.push("string");
 mixed.push(true);
 
 
+////////////////////
 // (11) Dynamic Type
+////////////////////
 let user1;
 let user2: any;
 
