@@ -11,6 +11,7 @@
     (08) Enum Type
     (09) Never Type
     (10) Union Type
+    (11) Dynamic Type
   */
 
 // (07) Tuple Type
@@ -57,3 +58,22 @@ console.log(getRGB(COLOR.GREEN));
 const raiseError = (message: string): never => {
   throw new Error(message);
 }
+
+
+// (10) Union Type
+let mixed: (string | number | boolean)[] = [];
+mixed.push(10);
+mixed.push("string");
+mixed.push(true);
+
+
+// (11) Dynamic Type
+let user1;
+let user2: any;
+
+user1 = {};
+user1.name = "rahim";
+user1.age = 27;
+
+user1 = "rahim";
+user1 = 27;
