@@ -1,5 +1,6 @@
+////////////////////
 // Type Aliases
-
+////////////////////
 type PersonTypeProps = {
   name: string;
   age: number;
