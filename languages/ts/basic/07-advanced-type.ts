@@ -32,9 +32,13 @@ type AC  = A & B; // name, age, email, phone
 ////////////////////
 // (2) Type Casting | type cast keyword: as, <> 
 ////////////////////
-// const body1 = document.body as HTMLBodyElement;                   // as
-// const body2 = <HTMLBodyElement> document.body;                    // <>
-// const body3 = <HTMLBodyElement> document.body as HTMLBodyElement; // combine
+interface IPerson {
+  name: string;
+  age: number;
+}
+const data: any = { name: "rahim", age: 27, country: "BD" };
+const person1 = data as IPerson;
+const person2 = <IPerson>data;
 
 
 ////////////////////
