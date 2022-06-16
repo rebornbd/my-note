@@ -24,12 +24,24 @@ const Header = () => {
     )
   };
 
+  const Title = () => {
+    return (
+      <div style={{
+        fontSize: '25px',
+        fontWeight: 700
+      }}>
+        React Jest Test
+      </div>
+    )
+  }
+
   
   return (
     <header className={styles.headerContainer}>
       <div className={styles.headerInnerContainer}>
         <div className={styles.headerICLeft}>
           <Logo />
+          <Title />
         </div>
       </div>
     </header>
