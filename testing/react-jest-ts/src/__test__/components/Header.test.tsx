@@ -20,7 +20,6 @@ afterEach(() => {
 it("Header components testing", () => {
   const headerText = "React Jest Test";
 
-
   act(() => {
     header.render(<Header />);
   });

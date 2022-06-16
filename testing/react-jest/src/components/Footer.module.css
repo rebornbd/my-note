@@ -1,0 +1,17 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 20px 20px;
+
+  background-color: #191919;
+}
+
+.footerCopyright {
+  font-size: 15px;
+  font-weight: 500;
+  color: #dddddd;
+}

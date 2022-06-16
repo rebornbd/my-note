@@ -1,0 +1,34 @@
+
+
+.btn {
+  color: #000000;
+  padding: 20px 100px;
+  font-size: 20px;
+  font-weight: 600;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.postsList {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 50px;
+  padding-left: 100px;
+}
+
+.post {
+  display: flex;
+  flex-direction: column;
+}
+
+.post .title {
+  font-size: 30px;
+  font-weight: 900;
+}
+
+.post .body {
+  font-size: 16px;
+  font-weight: 500;
+}

@@ -1,0 +1,55 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.socialIconTag {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  padding: 8px;
+  cursor: pointer;
+  opacity: 1;
+  border-radius: 50%;
+  color: #ffffff;
+}
+
+.socialIcon {
+  font-size: 20px;
+}
+
+.socialIconTag:hover, .socialIconTag:active {
+  color: #ffffff;
+  opacity: 0.8;
+}
+
+
+/* ALL SOCIALS classname */
+.instagram {
+  background-color: #C13584;
+}
+
+.facebook {
+  background-color: #4267B2;
+}
+
+.github {
+  background-color: #141414;
+}
+
+.linkedin {
+  background-color: #006192;
+}
+
+.stackoverflow {
+  background-color: #F48024;
+}
+
+.discord {
+  background-color: #7289da;
+}
