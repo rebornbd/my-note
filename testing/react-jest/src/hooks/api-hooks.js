@@ -19,9 +19,10 @@ export function useGetPosts() {
 
       const res = await axios.get('https://jsonplaceholder.typicode.com/posts');
       const resData = res.data;
-      const posts = resData.splice(0, 10);
+      // const posts = resData.splice(0, 10);
 
-      setPosts(posts);
+      // setPosts(posts);
+      setPosts(resData);
       setFetchState(FetchState.SUCCESS);
     } catch (err) {
       setFetchState(FetchState.ERROR);
