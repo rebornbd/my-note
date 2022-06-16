@@ -1,0 +1,120 @@
+.headerContainer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 1000;
+
+  /* box-shadow: 0 2px 8px #f0f1f2; */
+  /* background-color: #191919; */
+  background-color: #413F42;
+  color: #dddddd;
+}
+.headerInnerContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+}
+
+/* logo */
+.headerICLeft {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-right: 10px;
+}
+.headerLogo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+}
+.headerLogoIcon {
+  font-size: 30px;
+  font-weight: 800;
+  margin: 0 20px;
+}
+.headerLogo > span {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/* nav-link */
+.headerICRight {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.headerICRNav {
+  display: flex;
+  flex-direction: row;
+}
+.navLinkActive {
+  color: #91C483;
+  border-bottom: 2px solid #91C483;
+}
+.navLink {
+  margin-right: 20px;
+}
+.navLink:last-child {
+  margin-right: 0;
+}
+.navLink > span {
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.navLinkActive > span {
+  font-weight: 700;
+}
+.headerICRDrawer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.navDrawerIcon {
+  font-size: 25px;
+  font-weight: 600;
+  display: none;
+}
+
+/* drawer */
+.drawer {
+  display: flex;
+  flex-direction: column;
+}
+.drawerNavLink {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  font-size: 15px;
+  font-weight: 400;
+  padding: 5px;
+  border-radius: 2px;
+  color: #3b3b3b;
+  background-color: #ffffff;
+  box-shadow: rgb(0 0 0 / 20%) 0px 2px 4px -1px,rgb(0 0 0 / 14%) 0px 4px 5px 0px, rgb(0 0 0 / 12%) 0px 1px 10px 0px;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+.drawerNavLink:last-child {
+  margin-bottom: 0;
+}
+.drawerTitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* media-query */
+@media screen and (max-width: 767px) {
+  .headerICRNav {
+    display: none;
+  }
+  .navDrawerIcon {
+    display: block;
+  }
+}

@@ -1,12 +1,15 @@
 import React from 'react';
 
+import { Layout } from './layout';
+import { Home } from './pages/home';
+
 
 const App = () => {
   return (
-    <div>
-      APP
-    </div>
-  );
+    <Layout>
+      <Home />
+    </Layout>
+  )
 }
 
 export default App;

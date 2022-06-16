@@ -4,3 +4,7 @@
   box-sizing: border-box;
   font-family: 'Source Sans Pro', sans-serif !important;
 }
+
+.carousel.carousel-slider {
+  height: 300px;
+}

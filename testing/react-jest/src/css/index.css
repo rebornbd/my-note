@@ -1,2 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap');
+@import "react-responsive-carousel/lib/styles/carousel.min.css";
+@import 'antd/dist/antd.css';
+@import 'carousel.css';
 @import 'global.css';
