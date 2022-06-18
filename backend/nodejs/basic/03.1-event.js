@@ -6,6 +6,8 @@ class Person extends EventEmitter {
     super();
     this.name = name;
     this.time = time;
+    
+    this.onEat();
   }
 
   // event listing
@@ -33,8 +35,8 @@ class Person extends EventEmitter {
 const rahim = new Person('rahim', 5);
 const korim = new Person('korim', 2);
 
-rahim.onEat();
-korim.onEat();
+// rahim.onEat();
+// korim.onEat();
 
 rahim.emitEat();
 korim.emitEat();
