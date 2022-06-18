@@ -10,7 +10,7 @@
 */
 
 ////////////////////
-// read streams
+// read | write streams
 ////////////////////
 const fs = require("fs");
 
