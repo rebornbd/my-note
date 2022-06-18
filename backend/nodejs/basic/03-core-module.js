@@ -54,13 +54,13 @@ const server = http.createServer((req, res) => {
 const fs = require('fs');
 const data = "Demo text data";
 
-fs.writeFile("data.txt", data, (err) => {
+fs.writeFile("./data/data.txt", data, (err) => {
   if (err) {
     console.log(`ERROR: ${err}`);
   }
 })
 
-fs.readFile("data.txt", (err, data) => {
+fs.readFile("./data/data.txt", (err, data) => {
   if (!err) {
     console.log(data.toString());
   } else {
