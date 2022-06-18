@@ -6,12 +6,12 @@ class Person extends EventEmitter {
     super();
     this.name = name;
     this.time = time;
-    
-    this.onEat();
+
+    this.#onEat();
   }
 
   // event listing
-  onEat() {
+  #onEat() {
     console.log(`START: ${this.name} | event listing`);
     this.on("EAT", this.eatHandler);
   }
@@ -37,6 +37,7 @@ const korim = new Person('korim', 2);
 
 // rahim.onEat();
 // korim.onEat();
+
 
 rahim.emitEat();
 korim.emitEat();
