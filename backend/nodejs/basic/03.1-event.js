@@ -28,6 +28,7 @@ class Person extends EventEmitter {
   }
 }
 
+
 // event create
 const rahim = new Person('rahim', 5);
 const korim = new Person('korim', 2);
