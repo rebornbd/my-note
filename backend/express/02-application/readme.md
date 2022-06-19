@@ -1,0 +1,22 @@
+### Express App methods
+```
+app.all()
+app.delete()
+app.disable()
+app.disabled()
+app.enable()
+app.enabled()
+app.engine()
+app.get()
+app.get()
+app.listen()
+app.METHOD()
+app.param()
+app.path()
+app.post()
+app.put()
+app.render()
+app.route()
+app.set()
+app.use()
+```
