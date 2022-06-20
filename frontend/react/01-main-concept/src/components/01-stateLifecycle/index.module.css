@@ -1,0 +1,13 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+  border: 1px solid #000000;
+}
+
+.innerContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
