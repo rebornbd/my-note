@@ -5,9 +5,15 @@
   font-family: 'Source Sans Pro', sans-serif !important;
 }
 
+button { cursor: pointer; }
 .border { border: 1px solid #000000; }
 
 .p-5 { padding: 5px; }
 .p-10 { padding: 10px; }
 .p-15 { padding: 15px; }
 .p-20 { padding: 20px; }
+
+.m-5 { margin: 5px; }
+.m-10 { margin: 10px; }
+.m-15 { margin: 15px; }
+.m-20 { margin: 20px; }
