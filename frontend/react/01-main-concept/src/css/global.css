@@ -17,3 +17,11 @@ button { cursor: pointer; }
 .m-10 { margin: 10px; }
 .m-15 { margin: 15px; }
 .m-20 { margin: 20px; }
+
+.color-red { color: #fd4b4b; }
+.color-green { color: #66eb73; }
+.color-error { color: #780901; }
+
+.bg-red { background-color: #fd4b4b; }
+.bg-green { background-color: #66eb73; }
+.bg-error { background-color: #780901; }

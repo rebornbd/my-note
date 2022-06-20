@@ -1,4 +1,4 @@
-### React main concepts
+## React main concepts
 ```
 01. State and Lifecycle
 02. Handling Events
@@ -6,4 +6,8 @@
 04. Lists and Keys
 05. Lifting State Up
 06. Composition vs Inheritance
+```
+
+## React advanced
+```
 ```
