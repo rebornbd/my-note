@@ -1,6 +1,6 @@
 import ListItem from "./ListItem";
 import ListItemFn from "./ListItemFn";
-import styles from "../common/css/common.module.css";
+import styles from "../../../common/css/common.module.css";
 
 
 export const ListKeys = () => {

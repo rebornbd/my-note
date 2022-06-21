@@ -1,7 +1,6 @@
 import Toggle from "./Toggle";
 import ToggleFn from "./ToggleFn";
-import styles from "../common/css/common.module.css";
-
+import styles from "../../../common/css/common.module.css";
 
 
 export const HandlingEvent = () => {

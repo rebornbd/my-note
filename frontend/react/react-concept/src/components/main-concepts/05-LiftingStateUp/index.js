@@ -1,6 +1,6 @@
 import Calculator from "./Calculator";
 import CalculatorFn from "./CalculatorFn";
-import styles from "../common/css/common.module.css";
+import styles from "../../../common/css/common.module.css";
 
 
 export const LiftingStateUp = () => {

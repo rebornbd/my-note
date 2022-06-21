@@ -1,6 +1,6 @@
 import Clock from "./Clock";
 import { ClockFn } from "./ClockFn";
-import styles from "../common/css/common.module.css";
+import styles from "../../../common/css/common.module.css";
 
 
 export const StateLifecycle = () => {

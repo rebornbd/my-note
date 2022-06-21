@@ -1,6 +1,6 @@
 import AgeCalculator from "./AgeCalculator";
 import AgeCalculatorFn from "./AgeCalculatorFn";
-import styles from "../common/css/common.module.css";
+import styles from "../../../common/css/common.module.css";
 
 
 export const ConditionalRendering = () => {
