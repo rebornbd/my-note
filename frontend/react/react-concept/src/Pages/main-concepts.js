@@ -5,6 +5,7 @@ import {
   ConditionalRendering,
   ListKeys,
   LiftingStateUp,
+  Context
 } from "../components/main-concepts";
 
 
@@ -16,6 +17,7 @@ const MainConcepts = () => {
       <ConditionalRendering />
       <ListKeys />
       <LiftingStateUp />
+      <Context />
     </>
   )
 }

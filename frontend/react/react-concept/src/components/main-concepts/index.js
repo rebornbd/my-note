@@ -3,7 +3,7 @@ import { HandlingEvent } from "./02-HandlingEvent";
 import { ConditionalRendering } from "./03-ConditionalRendering";
 import { ListKeys } from "./04-ListsKeys";
 import { LiftingStateUp } from "./05-LiftingStateUp";
-
+import { Context } from "./07-Context"
 
 export {
   StateLifecycle,
@@ -11,4 +11,5 @@ export {
   ConditionalRendering,
   ListKeys,
   LiftingStateUp,
+  Context,
 };
