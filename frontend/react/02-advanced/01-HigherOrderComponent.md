@@ -1,6 +1,9 @@
 # Higher-Order Components
 ```
 A HOC is a FUNCTION that takes a COMPONENT as parameter & returns a new COMPONENT.
+
+WHY WE NEED HOC:
+Shared common functionality & use it any component.
 ```
 
 ## HOC create
