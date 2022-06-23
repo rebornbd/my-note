@@ -94,6 +94,7 @@ const App = () => {
 
 ### useMemo
 Returns a memoized value [& return a new value when changes the dependency]
+##### memoized value
 ```js
 const memoizedValue = useMemo(() => computeExpensiveValue(a, b), [a, b]);
 
