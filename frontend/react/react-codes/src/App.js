@@ -10,7 +10,8 @@ import {
 } from "./layouts";
 import {
   MainConcepts,
-  Advanced
+  Advanced,
+  Hooks
 } from "./Pages";
 
 
@@ -27,6 +28,11 @@ const App = () => {
           <Route
             path="/advanced"
             element={<Advanced />}
+          />
+
+          <Route
+            path="/hooks"
+            element={<Hooks />}
           />
 
           <Route

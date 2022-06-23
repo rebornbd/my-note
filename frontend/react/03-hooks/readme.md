@@ -140,10 +140,68 @@ const App = () => {
 ```
 
 
-### 
-
+### useRef
+useRef returns a mutable ref object whose .current property is initialized to the passed argument (initialValue).
+##### useRef to Reference React Elements
 ```js
+const refContainer = useRef(initialValue);
 
+
+////////////////////
+// EXAMPLE
+////////////////////
+const App = () => {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [currRef, setCurrRef] = useState(useRef(null));
+
+  const nameRef = useRef(null);
+  const emailRef = useRef(null);
+
+  useEffect(() => {
+    currRef?.current?.focus();
+    // console.log(currRef?.current);
+  }, [name, email, currRef]);
+
+
+  const handleInput = (value, setHandler, currRef) => {
+    setHandler(value);
+    setCurrRef(currRef);
+  }
+
+  const Input = ({ type="text", value="", setHandler }, ref) => {
+    return (
+      <input
+        type={type}
+        ref={ref}
+        value={value}
+        onChange={(e) => handleInput(e.target.value, setHandler, ref)}
+      />
+    )
+  }
+  const UserInput = React.forwardRef(Input);
+
+
+  return (
+    <form>
+      <span>Name</span>
+      <UserInput
+        type='text'
+        value={name}
+        setHandler={setName}
+        ref={nameRef}
+      />
+
+      <span>Email</span>
+      <UserInput
+        type='email'
+        value={email}
+        setHandler={setEmail}
+        ref={emailRef}
+      />
+    </form>
+  )
+}
 ```
 
 
