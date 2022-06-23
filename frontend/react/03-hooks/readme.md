@@ -206,7 +206,44 @@ const App = () => {
 
 
 ### useReducer
+useReducer accepts a reducer [(state, action) => newState], and returns a pair of current state & dispatch method.
 
+##### An alternative to useState
 ```js
+const [state, dispatch] = useReducer(reducer, initialState);
 
+
+////////////////////
+// EXAMPLE
+////////////////////
+const initialState = { count: 0 };
+
+const reducer = (state, action) => {
+  switch(action.type) {
+    case "INCREMENT":
+      return {
+        count: state.count + (action.value || 1)
+      }
+    
+    case "DECREMENT":
+      return {
+        count: state.count - (action.value || 1)
+      }
+    
+    default:
+      return state;
+  }
+}
+
+const App = () => {
+  const [state, dispatch] = useReducer(reducer, initialState);
+
+  return (
+    <>
+      <button onClick={() => dispatch({ type: "INCREMENT", value: 1 })}>+</button>
+      <span>{state.count}</span>
+      <button onClick={() => dispatch({ type: "DECREMENT", value: 1 })}>-</button>
+    </>
+  )
+}
 ```
