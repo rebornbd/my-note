@@ -40,11 +40,11 @@ setCounter((prevCounter) => ({
 ### useEffect
 useEffect lets us perform side effects in function components & return a destroy function or not explicitly return any value, implicitly returning undefined.
 ```js
-useEffect(() => {});
-useEffect(() => {}, []);
-useEffect(() => {}, [*]);
-useEffect(() => {}, [dependency1]);
-useEffect(() => {}, [dep1, dep2]);
+useEffect(() => {});                // call every render
+useEffect(() => {}, []);            // call only 1'st render
+useEffect(() => {}, [*]);           // call every render
+useEffect(() => {}, [dependency1]); // call only change dependency1 & render
+useEffect(() => {}, [dep1, dep2]);  // call only change (dep1 | dep2) & render
 useEffect(() => {
   // .......
   // .......
