@@ -4,7 +4,7 @@ import { ThemeContext } from './ThemeContext';
 
 const Profile = ({ user, myTheme }) => {
   const theme = useContext(ThemeContext);
-  console.log("myTheme", myTheme);
+  // console.log("myTheme", myTheme);
 
   const styles = {
     display: 'flex',

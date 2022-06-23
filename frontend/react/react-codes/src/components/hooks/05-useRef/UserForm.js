@@ -5,14 +5,14 @@ import React, { useState, useEffect, useRef } from 'react'
 const UserForm = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [currRef, setCurrRef] = useState(null);
+  const [currRef, setCurrRef] = useState(useRef(null));
   
   const nameRef = useRef(null);
   const emailRef = useRef(null);
 
   useEffect(() => {
-    console.log(currRef?.current);
-    currRef?.current?.focus();
+    currRef.current?.focus();
+    // console.dir(currRef.current);
   }, [currRef, name, email]);
 
   const handleInput = (value, setHandler, cRef) => {
@@ -21,9 +21,12 @@ const UserForm = () => {
   }
 
   const Input = ({ type="text", label="", value="", setHandler }, ref) => {
+    const divStyles = { margin: '10px 0' };
+    const spanStyles = { minWidth: '60px', display: 'inline-block' };
+
     return (
-      <div>
-        <span>{label}</span>
+      <div style={divStyles}>
+        <span style={spanStyles}>{label}: </span>
         <input
           type={type}
           ref={ref}

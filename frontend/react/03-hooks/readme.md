@@ -205,7 +205,7 @@ const App = () => {
 ```
 
 
-### 
+### useReducer
 
 ```js
 

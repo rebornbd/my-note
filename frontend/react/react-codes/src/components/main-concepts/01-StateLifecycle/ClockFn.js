@@ -1,29 +1,32 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 
 export const ClockFn = () => {
-  let timeId = null;
   const [date, setDate] = useState(new Date());
+  const clearTimeIdRef = useRef(null);
 
   useEffect(() => {
-    tick();
-
+    const timeId = clearTimeIdRef.current = setInterval(tick, 1000);
+    
     return () => {
-      // console.log("ClockFn component is unmount");
+      // console.log("ClockFn component is unmount", timeId);
       clearInterval(timeId);
     }
-  }, [date]);
+  }, []);
 
   const tick = () => {
-    timeId = setInterval(() => {
-      setDate(new Date());
-    }, 1000);
+    setDate(new Date());
+  }
+
+  const handleClock = () => {
+    clearInterval(clearTimeIdRef.current);
   }
 
   return (
     <div className="p-5 border">
       <h2>Functional component</h2>
       <h3>{date.toLocaleTimeString()}</h3>
+      <button onClick={handleClock}>STOP CLOCK</button>
     </div>
   )
 }
