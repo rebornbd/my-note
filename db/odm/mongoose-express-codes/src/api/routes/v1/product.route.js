@@ -1,33 +1,22 @@
 const express = require('express');
-const qs = require('querystring');
+const controller = require("../../controllers/product.controller");
+
 
 // router
 const router = express.Router();
 
-router.route("/")
-  .get((req, res) => {
-    res.send("List View");
-  })
-  .post((req, res) => {
-    res.send("Create View");
-  })
+// load product
+router.param("productId", controller.load)
 
+router.route("/")
+  .get(controller.list)
+  .post(controller.create)
 
 router.route("/:productId")
-  .get((req, res) => {
-    const { productId } = req.params;
-    
-    res.send(`${productId}: Specific View`);
-  })
-  .put((req, res) => {
-    res.send("Put View");
-  })
-  .patch((req, res) => {
-    res.send("Patch View");
-  })
-  .delete((req, res) => {
-    res.send("Delete View");
-  })
+  .get(controller.view)
+  .put(controller.update)
+  .patch(controller.update)
+  .delete(controller.delete)
 
 
 module.exports = router;
