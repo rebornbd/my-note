@@ -18,6 +18,17 @@ Model.updateMany()
 Model.updateOne()
 ```
 
+### using
+```js
+const User = mongoose.model('User', new Schema({ name: String, age: Number }));
+
+// findOneAndUpdate
+const oldUser = User.findOneAndUpdate({ _id: id }, { name: "rahim" });
+const updatedUser = User.findOneAndUpdate({ _id: id }, { name: "rahim" }, { new: true });
+// Upsert | if not find then create new instance
+const updatedOrCreateUser = User.findOneAndUpdate({ _id: id }, { name: "rahim" }, { new: true, upsert: true });
+```
+
 ### Executing Query
 ```js
 const Person = mongoose.model('Person', yourSchema);
