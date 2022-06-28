@@ -1,6 +1,8 @@
 # Connection
+
+## connection config
+#### mongoose.config.js
 ```js
-// mongoose.config.js
 const mongoose = require('mongoose');
 
 
@@ -20,9 +22,11 @@ exports.connect = () => {
     .then(() => console.log('mongoDB connected...'));
   return mongoose.connection;
 };
+```
 
-
-// app.js
+## main app
+#### app.js
+```js
 const express = require("express");
 const mongoose = require("./config/mongoose.congig");
 
