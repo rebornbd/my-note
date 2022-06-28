@@ -1,7 +1,6 @@
 # Connection
 
-### connection config
-#### mongoose.config.js
+### connection config (mongoose.config.js)
 ```js
 const mongoose = require('mongoose');
 
@@ -24,8 +23,7 @@ exports.connect = () => {
 };
 ```
 
-### main app
-#### app.js
+### main app (app.js)
 ```js
 const express = require("express");
 const mongoose = require("./config/mongoose.congig");
