@@ -17,9 +17,11 @@ const Counter = () => {
     <div className={styles.container}>
       <h1>REDUX COUNTER APP</h1>
       <div className={styles.innerContainer}>
-        <button type='button' onClick={() => dispatch(incrementCounter())}>+</button>
+        <button type='button' onClick={() => dispatch(incrementCounter(5))}>+5</button>
+        <button type='button' onClick={() => dispatch(incrementCounter())}>+1</button>
         <div className={styles.count}>{count}</div>
-        <button type='button' onClick={() => dispatch(decrementCounter())}>-</button>
+        <button type='button' onClick={() => dispatch(decrementCounter())}>-1</button>
+        <button type='button' onClick={() => dispatch(decrementCounter(5))}>-5</button>
       </div>
       <button type='button' onClick={() => dispatch(resetCounter())}>RESET</button>
     </div>

@@ -15,13 +15,13 @@ export const counterReducer = (state=initCounterState, action) => {
     case INCREMENT:
       return {
         ...state,
-        count: state.count + 1
+        count: state.count + (action.payload || 1)
       }
     
     case DECREMENT:
       return {
         ...state,
-        count: state.count - 1
+        count: state.count - (action.payload || 1)
       }
       
     case RESET:

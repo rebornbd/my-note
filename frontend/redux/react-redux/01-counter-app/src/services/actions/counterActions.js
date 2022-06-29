@@ -5,15 +5,17 @@ import {
 } from "../constants/counterConstants";
 
 
-export const incrementCounter = () => {
+export const incrementCounter = (value=1) => {
   return {
-    type: INCREMENT
+    type: INCREMENT,
+    payload: value
   }
 }
 
-export const decrementCounter = () => {
+export const decrementCounter = (value=1) => {
   return {
-    type: DECREMENT
+    type: DECREMENT,
+    payload: value
   }
 }
 
