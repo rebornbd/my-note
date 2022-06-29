@@ -15,7 +15,8 @@ export const getAllTodos = () => async (dispatch) => {
 
   try {
     const res = await (await axiox.get(API_URL)).data;
-    const todos = res.splice(0, 10);
+    const fixedTodos = res.splice(0, 10);
+    const todos = fixedTodos.map(todo => ({ id: todo.id, title: todo.title }));
     dispatch(getTodosSuccess(todos));
   } catch (err) {
     const errorMessage = err.message;
