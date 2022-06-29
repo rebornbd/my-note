@@ -115,8 +115,8 @@ const Todo = () => {
     <div>
       <h1>REACT-TOOLKIT API CALL</h1>
       
-      { isLoading && <h1>Loading...</h1>  }
-      { error && <h1>{error}</h1>  }
+      { isLoading && <h1>Loading...</h1> }
+      { error && <h1>{error}</h1> }
       { data && data.map(todo => (
         <div key={todo.id}>
           <h5>{todo.id}</h5>
