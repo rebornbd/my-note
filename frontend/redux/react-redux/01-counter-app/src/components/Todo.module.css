@@ -1,0 +1,18 @@
+.container {
+  padding: 20px 100px;
+  width: 100%;
+  border: 1px solid #000000;
+  border-radius: 5px;
+}
+
+.header {
+  font-size: 20px;
+  font-weight: 500;
+  display: inline-block;
+  min-width: 80px;
+}
+
+span {
+  font-size: 18px;
+  font-weight: 500;
+}
