@@ -1,5 +1,5 @@
 {
-  "name": "01-counter-app",
+  "name": "counter-app-with-redux",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
