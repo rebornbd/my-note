@@ -1,0 +1,47 @@
+.container {
+  padding: 100px 50px 0px 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+
+.innerContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+button {
+  border: none;
+  width: 100px;
+  height: 50px;
+  background-color: brown;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.innerContainer button {
+  height: 80px;
+  background-color: black;
+  font-size: 30px;
+  font-weight: 600;
+  border-radius: 5px;
+}
+
+.count {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  background-color: darkgreen;
+  color: #ffffff;
+  border-radius: 50%;
+  font-size: 30px;
+  font-weight: 600;
+}
