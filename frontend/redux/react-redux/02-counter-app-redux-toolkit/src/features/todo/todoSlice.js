@@ -1,4 +1,16 @@
-import { createSlice } from "@reduxjs/toolkit";
+import axiox from "axios";
+import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+
+
+// api url
+const API_URL = "https://jsonplaceholder.typicode.com/todos";
+
+export const fetchTodos = createAsyncThunk("todo/fetchTodos", async () => {
+  const res = await axiox.get(API_URL);
+  const data = res.data;
+  const todos = data.splice(0, 10);
+  return todos;
+})
 
 
 const todoSlice = createSlice({
@@ -9,24 +21,23 @@ const todoSlice = createSlice({
     error: null
   },
 
-  reducers: {
-    getTodosRequest: (state) => {
-      state.isLoading = true
-    },
+  extraReducers: (builder) => {
+    builder.addCase(fetchTodos.pending, (state) => {
+      state.isLoading = true;
+    });
 
-    getTodosSuccess: (state, action) => {
-      state.data = action.payload
-      state.isLoading = false
+    builder.addCase(fetchTodos.fulfilled, (state, action) => {
+      state.data = action.payload;
+      state.isLoading = false;
       state.error = null
-    },
+    });
 
-    getTodosFailed: (state, action) => {
-      state.data = []
-      state.isLoading = false
-      state.error = action.payload
-    }
+    builder.addCase(fetchTodos.rejected, (state, action) => {
+      state.data = [];
+      state.isLoading = false;
+      state.error = action.error.message;
+    });
   }
 });
 
-export const { getTodosRequest, getTodosSuccess, getTodosFailed } = todoSlice.actions;
 export default todoSlice.reducer;

@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from "react-redux";
-import { getAllTodos } from "../features/todo/todoAPI";
+import { fetchTodos } from "../features/todo/todoSlice";
 import styles from "./Todo.module.css";
 
 
@@ -10,7 +10,7 @@ const Todo = () => {
 
 
   useEffect(() => {
-    dispatch(getAllTodos());
+    dispatch(fetchTodos());
   }, []);
 
   return (
