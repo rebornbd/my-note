@@ -19,3 +19,12 @@ NoSQL Database is a non-relational Data Management System, that does not require
 03) The data is growing continuously and you need to scale the database
 ```
 
+### Mapping RDBMS to MongoDB
+```
+RDBMS          MongoDB
+=======        ========
+db       ---   db
+table    ---   collection
+row      ---   document
+column   ---   field
+```
