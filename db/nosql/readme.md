@@ -11,3 +11,11 @@ NoSQL Database is a non-relational Data Management System, that does not require
 02) High scalability | horizontal scaling | low cost
 03) High Availability | highly available because in case of any failure data replicates itself to the previous consistent state
 ```
+
+### When to use
+```
+01) When you want to store and retrieve huge amount of data.
+02) The data is not structured and changing over time
+03) The data is growing continuously and you need to scale the database
+```
+
