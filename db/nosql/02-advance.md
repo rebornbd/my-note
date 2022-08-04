@@ -93,16 +93,16 @@ db.collection.aggregate([{ $match:...}, {$group:...}, {$sort:...}])
 #### DATA:
 use coffeeshop
 db.sales.insertMany([
-	{ "_id" :  1, "item" : "Americanos", "price" : 5,  "size": "Short",  "quantity" : 22 },
-	{ "_id" :  2, "item" : "Cappuccino", "price" : 6,  "size": "Short",  "quantity" : 12 },
-	{ "_id" :  3, "item" : "Lattes",     "price" : 15, "size": "Grande", "quantity" : 25 },
-	{ "_id" :  4, "item" : "Mochas",     "price" : 25, "size": "Tall",   "quantity" : 11 },
-	{ "_id" :  5, "item" : "Americanos", "price" : 10, "size": "Grande", "quantity" : 12 },
-	{ "_id" :  6, "item" : "Cappuccino", "price" : 7,  "size": "Tall",   "quantity" : 20 },
-	{ "_id" :  7, "item" : "Lattes",     "price" : 25, "size": "Tall",   "quantity" : 30 },
-	{ "_id" :  8, "item" : "Americanos", "price" : 10, "size": "Grande", "quantity" : 21 },
-	{ "_id" :  9, "item" : "Cappuccino", "price" : 10, "size": "Grande", "quantity" : 17 },
-	{ "_id" : 10, "item" : "Americanos", "price" : 8,  "size": "Tall",   "quantity" : 15 }
+  { "_id" :  1, "item" : "Americanos", "price" : 5,  "size": "Short",  "quantity" : 22 },
+  { "_id" :  2, "item" : "Cappuccino", "price" : 6,  "size": "Short",  "quantity" : 12 },
+  { "_id" :  3, "item" : "Lattes",     "price" : 15, "size": "Grande", "quantity" : 25 },
+  { "_id" :  4, "item" : "Mochas",     "price" : 25, "size": "Tall",   "quantity" : 11 },
+  { "_id" :  5, "item" : "Americanos", "price" : 10, "size": "Grande", "quantity" : 12 },
+  { "_id" :  6, "item" : "Cappuccino", "price" : 7,  "size": "Tall",   "quantity" : 20 },
+  { "_id" :  7, "item" : "Lattes",     "price" : 25, "size": "Tall",   "quantity" : 30 },
+  { "_id" :  8, "item" : "Americanos", "price" : 10, "size": "Grande", "quantity" : 21 },
+  { "_id" :  9, "item" : "Cappuccino", "price" : 10, "size": "Grande", "quantity" : 17 },
+  { "_id" : 10, "item" : "Americanos", "price" : 8,  "size": "Tall",   "quantity" : 15 }
 ]);
 
 ### $avg
