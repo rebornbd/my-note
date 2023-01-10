@@ -87,6 +87,7 @@ HSET user:rahim email "rahim@gmail.com"
 HSET user:karim name "Karim Khan" email "karim@gmail.com"
 
 HGET user:rahim name
+HMGET user:rahim name email
 HGETALL user:rahim
 
 HKEYS user:rahim
